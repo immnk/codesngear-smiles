@@ -1,0 +1,60 @@
+.about {
+    @extend .outer-wrapper;
+    color: $font-color-white;
+    .content {
+        position: relative;
+        overflow: auto;
+        .mani {
+            @extend .img;
+            background: #EEE url('../img/mani.jpg') no-repeat;
+            background-size: cover;
+        }
+        blockquote {
+            font-family: $font-montserrat;
+            background: $caption-background;
+            border-left: 10px solid $quote-border;
+            margin: 10px;
+            padding: 16px 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+            font-size: 20px;
+            color: $caption-special;
+            overflow: hidden;
+            &:before {
+                color: $quote-border;
+                content: open-quote;
+                font-size: 4em;
+                line-height: 0.1em;
+                margin-right: 0.25em;
+                vertical-align: -0.4em;
+            }
+            p {
+                display: inline;
+                float: right;
+            }
+        }
+        .description {
+            margin: 10px;
+            padding: 0 10px;
+            font-size: 16px;
+            .highlight {
+                font-size: 18px;
+                border-bottom: 1.5px solid $caption-special;
+                font-family: $font-montserrat;
+                font-weight: bold;
+            }
+            .blink {
+                font-size: 18px;
+                font-family: $font-montserrat;
+                text-transform: capitalize;
+            }
+            a {
+                font-size: 18px;
+                font-family: $font-montserrat;
+                text-decoration: none;
+                border-bottom: 5px solid $quote-border;
+                color: $caption-special;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

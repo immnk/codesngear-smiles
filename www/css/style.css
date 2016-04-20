@@ -1,1 +1,248 @@
-/* Empty. Add your own CSS if you like */
+@charset "UTF-8";
+/* SASS / Social Media Brand Colors */
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-Regular.otf); }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Light.ttf);
+  font-weight: 300; }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Bold.ttf);
+  font-weight: 700; }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Black.ttf);
+  font-weight: 900; }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic; }
+body.ionic {
+  font-family: "Lato", "sans-serif";
+  color: #FFF; }
+  body.ionic input,
+  body.ionic input::-webkit-placeholder,
+  body.ionic textarea {
+    font-family: "Lato", "sans-serif";
+    font-weight: normal; }
+
+.bar {
+  background: #18bc9c !important;
+  font-family: "Lato", "sans-serif"; }
+  .bar .button {
+    color: #FFF !important; }
+  .bar .title {
+    color: #FFF !important; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3); }
+
+.outer-wrapper, .contact, .dashboard, .about {
+  position: relative;
+  font-family: "Lato", "sans-serif";
+  min-height: calc(100vh - 44px);
+  background: #18bc9c url("../img/green.jpg") no-repeat;
+  background-size: cover; }
+
+.pane {
+  background-color: #101A1B !important; }
+
+.img, ion-side-menu .avatar, .dashboard .content .nerd, .about .content .mani {
+  width: 200px;
+  height: 200px;
+  margin: 12px auto;
+  border: 1px solid #676767;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75); }
+
+ion-side-menu {
+  background: rgba(179, 255, 171, 0.5);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgba(179, 255, 171, 0.5), rgba(18, 255, 247, 0.5)), url("../img/pentagon.png");
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(179, 255, 171, 0.5), rgba(18, 255, 247, 0.5)), url("../img/pentagon.png");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center center; }
+  ion-side-menu .avatar {
+    background: #444 url("../img/user_avatar.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px; }
+  ion-side-menu .menu-list .list {
+    margin-top: 20px; }
+  ion-side-menu .menu-list .item {
+    background-color: rgba(255, 255, 255, 0);
+    border: #676767;
+    border-bottom-color: #006551; }
+    ion-side-menu .menu-list .item .item-content {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      font-family: "Montserrat", "sans-serif";
+      color: #006551; }
+      ion-side-menu .menu-list .item .item-content i {
+        padding-right: 10px;
+        font-size: 1.5em;
+        color: #006551; }
+      ion-side-menu .menu-list .item .item-content:active {
+        background-color: rgba(0, 0, 0, 0.3); }
+
+.buttons .title {
+  font-weight: bold;
+  font-family: "Montserrat"; }
+
+.contact .content {
+  position: relative;
+  font-family: "Lato", "sans-serif";
+  padding: 0 20px;
+  color: #FFF;
+  overflow: auto; }
+  .contact .content h3 {
+    margin: 100px 0px 10px;
+    color: #ed4e6e;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center; }
+  .contact .content p {
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 100; }
+    .contact .content p strong {
+      text-decoration: underline; }
+  .contact .content .social {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0; }
+    .contact .content .social li {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      border-radius: 50%;
+      padding: 0px; }
+      .contact .content .social li a {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        height: 60px;
+        width: 60px;
+        display: block; }
+      .contact .content .social li:active {
+        background: rgba(0, 0, 0, 0.3); }
+    .contact .content .social .general {
+      background: #1b926c; }
+    .contact .content .social .facebook {
+      background: #3b5998; }
+    .contact .content .social .google {
+      background: #dd4b39; }
+    .contact .content .social .twitter {
+      background: #00aced; }
+
+.dashboard .content {
+  position: relative;
+  overflow: auto; }
+  .dashboard .content .nerd {
+    background: #2C3E50 url("../img/profile.png");
+    background-size: cover; }
+  .dashboard .content .intro-text {
+    color: #FFF;
+    overflow: auto; }
+    .dashboard .content .intro-text .highlight, .dashboard .content .intro-text .name, .dashboard .content .intro-text .tag {
+      text-transform: uppercase;
+      font-family: "Montserrat", "sans-serif";
+      margin: 14px auto;
+      display: block;
+      text-align: center; }
+    .dashboard .content .intro-text .name {
+      font-size: 24px;
+      font-weight: 700; }
+    .dashboard .content .intro-text .tag {
+      font-size: 16px;
+      font-weight: lighter;
+      font-family: "Lato", "sans-serif";
+      text-decoration: overline; }
+    .dashboard .content .intro-text .specialites {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 14px; }
+      .dashboard .content .intro-text .specialites .dev {
+        background: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        color: #FFF; }
+        .dashboard .content .intro-text .specialites .dev i {
+          font-size: 2.5em; }
+        .dashboard .content .intro-text .specialites .dev div {
+          margin-top: 10px;
+          font-weight: lighter;
+          font-size: 1.3em;
+          text-transform: capitalize; }
+
+.about {
+  color: #FFF; }
+  .about .content {
+    position: relative;
+    overflow: auto; }
+    .about .content .mani {
+      background: #EEE url("../img/mani.jpg") no-repeat;
+      background-size: cover; }
+    .about .content blockquote {
+      font-family: "Montserrat", "sans-serif";
+      background: #2c3f52;
+      border-left: 10px solid #989898;
+      margin: 10px;
+      padding: 16px 10px;
+      quotes: "“" "”" "‘" "’";
+      font-size: 20px;
+      color: #ed4e6e;
+      overflow: hidden; }
+      .about .content blockquote:before {
+        color: #989898;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em; }
+      .about .content blockquote p {
+        display: inline;
+        float: right; }
+    .about .content .description {
+      margin: 10px;
+      padding: 0 10px;
+      font-size: 16px; }
+      .about .content .description .highlight, .about .dashboard .content .description .intro-text .name, .dashboard .about .content .description .intro-text .name, .about .dashboard .content .intro-text .description .name, .dashboard .about .content .intro-text .description .name, .about .dashboard .content .description .intro-text .tag, .dashboard .about .content .description .intro-text .tag, .about .dashboard .content .intro-text .description .tag, .dashboard .about .content .intro-text .description .tag {
+        font-size: 18px;
+        border-bottom: 1.5px solid #ed4e6e;
+        font-family: "Montserrat", "sans-serif";
+        font-weight: bold; }
+      .about .content .description .blink {
+        font-size: 18px;
+        font-family: "Montserrat", "sans-serif";
+        text-transform: capitalize; }
+      .about .content .description a {
+        font-size: 18px;
+        font-family: "Montserrat", "sans-serif";
+        text-decoration: none;
+        border-bottom: 5px solid #989898;
+        color: #ed4e6e;
+        text-transform: capitalize; }
+
+/*# sourceMappingURL=style.css.map */

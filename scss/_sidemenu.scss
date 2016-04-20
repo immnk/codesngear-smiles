@@ -1,0 +1,55 @@
+ion-side-menu {
+    // background: linear-gradient(rgba(97, 98, 116, .7), rgba(97, 98, 116, .5)), url("../img/pentagon.png");
+    background: rgba(179, 255, 171, 0.5);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgba(179, 255, 171, 0.5), rgba(18, 255, 247, 0.5)), url("../img/pentagon.png");
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgba(179, 255, 171, 0.5), rgba(18, 255, 247, 0.5)), url("../img/pentagon.png");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-position: center center;
+    .avatar {
+        @extend .img;
+        background: #444 url('../img/user_avatar.png');
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        // margin: 20px auto;
+        // border: 1px solid $theme-border-color;
+        // border-radius: 50%;
+        // -webkit-box-shadow: 0 8px 6px -6px $theme-border-color;
+        // -moz-box-shadow: 0 8px 6px -6px $theme-border-color;
+        // box-shadow: 0 8px 6px -6px $theme-border-color;
+    }
+    .menu-list {
+        .list {
+            margin-top: 20px;
+        }
+        .item {
+            background-color: $transparent-background;
+            border: $theme-border-color;
+            border-bottom-color: $font-theme-color;
+            .item-content {
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 15px;
+                font-family: $font-montserrat;
+                color: $font-theme-color;
+                i {
+                    padding-right: 10px;
+                    font-size: 1.5em;
+                    color: $font-theme-color;
+                }
+                &:active {
+                    background-color: $transparent-black-background;
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    .title {
+        font-weight: bold;
+        font-family: "Montserrat";
+    }
+}

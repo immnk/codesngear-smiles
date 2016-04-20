@@ -1,4 +1,4 @@
-controllers.controller(MANI.CONTROLLERS.SideMenuController, SideMenuController);
+controllers.controller(SMILES.CONTROLLERS.SideMenuController, SideMenuController);
 
 SideMenuController.inject = ['$scope'];
 

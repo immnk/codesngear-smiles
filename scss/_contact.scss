@@ -1,0 +1,65 @@
+$caption-background: #2c3f52;
+.contact {
+    @extend .outer-wrapper;
+    .content {
+        position: relative;
+        font-family: $font-family;
+        padding: 0 20px;
+        color: $font-color-white;
+        overflow: auto;
+        h3 {
+            margin: 100px 0px 10px;
+            color: #ed4e6e;
+            font-size: 24px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            text-align: center;
+        }
+        p {
+            line-height: 20px;
+            margin: 0;
+            padding: 0 0 10px;
+            text-align: center;
+            font-family: Lato;
+            font-weight: 100;
+            strong {
+                text-decoration: underline;
+            }
+        }
+        .social {
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            li {
+                display: inline-block;
+                width: auto;
+                text-align: center;
+                border-radius: 50%;
+                padding: 0px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 20px;
+                    height: 60px;
+                    width: 60px;
+                    display: block;
+                }
+                &:active {
+                    background: $transparent-black-background;
+                }
+            }
+            .general {
+                background: $general;
+            }
+            .facebook {
+                background: $facebook;
+            }
+            .google {
+                background: $googleplus;
+            }
+            .twitter {
+                background: $twitter;
+            }
+        }
+    }
+}

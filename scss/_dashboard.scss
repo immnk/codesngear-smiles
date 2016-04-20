@@ -1,0 +1,57 @@
+.dashboard {
+    @extend .outer-wrapper;
+    .content {
+        position: relative;
+        overflow: auto;
+        .nerd{
+            @extend .img;
+            background: #2C3E50 url('../img/profile.png');
+            background-size: cover;
+        }
+        .intro-text {
+            color: $font-color-white;
+            overflow: auto;
+            .highlight {
+                text-transform: uppercase;
+                font-family: $font-montserrat;
+                margin: 14px auto;
+                display: block;
+                text-align: center;
+            }
+            .name {
+                @extend .highlight;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .tag {
+                @extend .highlight;
+                font-size: 16px;
+                font-weight: lighter;
+                font-family: $font-family;
+                text-decoration: overline;
+            }
+            .specialites {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 14px;
+                .dev {
+                    background: $transparent-black-background;
+                    text-align: center;
+                    margin: 10px;
+                    padding: 10px;
+                    color: $font-color-white;
+                    i {
+                        font-size: 2.5em;
+                    }
+                    div {
+                        margin-top: 10px;
+                        font-weight: lighter;
+                        font-size: 1.3em;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}

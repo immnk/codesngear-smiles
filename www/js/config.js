@@ -1,12 +1,12 @@
-var MANI = {
-    APP_NAME: "mani",
-    MESSAGES : "MANI_MESSAGES",
+var SMILES = {
+    APP_NAME: "smiles",
+    MESSAGES : "SMILES_MESSAGES",
     MODULE_NAMES: {
-        CONTROLLERS: "mani.controllers",
-        FACTORIES: "mani.factories",
-        DIRECTIVES : "mani.directives",
-        UTILS: "mani.utils",
-        MESSAGES : "mani.messages",
+        CONTROLLERS: "smiles.controllers",
+        FACTORIES: "smiles.factories",
+        DIRECTIVES : "smiles.directives",
+        UTILS: "smiles.utils",
+        MESSAGES : "smiles.messages",
         LOGGER : "Logger",
         LOCAL_STORAGE : "LocalStorage"
     },
@@ -70,7 +70,6 @@ var MANI = {
         }
     },
     BACK_END: {
-        LocalService: "file:///android_asset/www/",
         RootURL: "http://satwebdev2.siriuscom.com/ela/mobiledev/rest.php?methodName=",
         IMAGEURL: "http://satwebdev2.siriuscom.com/ela/mobiledev/imageprovider.php?methodName=getUserAvatar&eid=",
         MethodName: {
@@ -102,10 +101,10 @@ var MANI = {
     }
 };
 
-var controllers = angular.module(MANI.MODULE_NAMES.CONTROLLERS, []);
-var factories = angular.module(MANI.MODULE_NAMES.FACTORIES, []);
-var directives = angular.module(MANI.MODULE_NAMES.DIRECTIVES, []);
-var utils = angular.module(MANI.MODULE_NAMES.UTILS, [MANI.MODULE_NAMES.LOGGER, MANI.MODULE_NAMES.LOCAL_STORAGE]);
-var messages = angular.module(MANI.MODULE_NAMES.MESSAGES, []);
-var logger = angular.module(MANI.MODULE_NAMES.LOGGER, []);
-var localStorage = angular.module(MANI.MODULE_NAMES.LOCAL_STORAGE, []);
+var controllers = angular.module(SMILES.MODULE_NAMES.CONTROLLERS, []);
+var factories = angular.module(SMILES.MODULE_NAMES.FACTORIES, []);
+var directives = angular.module(SMILES.MODULE_NAMES.DIRECTIVES, []);
+var utils = angular.module(SMILES.MODULE_NAMES.UTILS, [SMILES.MODULE_NAMES.LOGGER, SMILES.MODULE_NAMES.LOCAL_STORAGE]);
+var messages = angular.module(SMILES.MODULE_NAMES.MESSAGES, []);
+var logger = angular.module(SMILES.MODULE_NAMES.LOGGER, []);
+var localStorage = angular.module(SMILES.MODULE_NAMES.LOCAL_STORAGE, []);

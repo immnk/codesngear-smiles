@@ -1,10 +1,10 @@
-factories.factory(MANI.FACTORIES.ProjectsFactory, ProjectsFactory);
+factories.factory(SMILES.FACTORIES.ProjectsFactory, ProjectsFactory);
 
 ProjectsFactory.$inject = ['$q', 'utils'];
 
 function ProjectsFactory($q, utils) {
 
-    var serviceUrl = MANI.BACK_END.LocalService + 'assets/projects.json';
+    var serviceUrl = SMILES.BACK_END.LocalService + 'assets/projects.json';
 
     var service = {};
     service.projects = [];

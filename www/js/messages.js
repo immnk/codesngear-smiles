@@ -1,4 +1,4 @@
-messages.constant(MANI.MESSAGES, {
+messages.constant(SMILES.MESSAGES, {
 	SUCCESS_TITLE: "Success",
 	ERROR_TITLE : "Something went wrong",
     NETWORK_ERROR: "A network error has occurred. Please try again",

@@ -1,4 +1,4 @@
-angular.module(MANI.MODULE_NAMES.LOCAL_STORAGE).factory(MANI.FACTORIES.LocalStorage, LocalStorage);
+angular.module(SMILES.MODULE_NAMES.LOCAL_STORAGE).factory(SMILES.FACTORIES.LocalStorage, LocalStorage);
 
 LocalStorage.$inject = [];
 

@@ -1,4 +1,4 @@
-angular.module(MANI.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.analytics', MANI.MODULE_NAMES.CONTROLLERS, MANI.MODULE_NAMES.FACTORIES, MANI.MODULE_NAMES.UTILS, MANI.MODULE_NAMES.DIRECTIVES, MANI.MODULE_NAMES.MESSAGES])
+angular.module(SMILES.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.analytics', SMILES.MODULE_NAMES.CONTROLLERS, SMILES.MODULE_NAMES.FACTORIES, SMILES.MODULE_NAMES.UTILS, SMILES.MODULE_NAMES.DIRECTIVES, SMILES.MODULE_NAMES.MESSAGES])
 
 .run(function($ionicPlatform, $ionicAnalytics) {
     $ionicPlatform.ready(function() {
@@ -18,60 +18,60 @@ angular.module(MANI.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.ana
     function($stateProvider, $urlRouterProvider, $compileProvider, $logProvider) {
 
         $stateProvider
-            .state(MANI.STATES.SIDE_MENU.name, {
-                url: MANI.STATES.SIDE_MENU.url,
+            .state(SMILES.STATES.SIDE_MENU.name, {
+                url: SMILES.STATES.SIDE_MENU.url,
                 abstract: true,
-                templateUrl: MANI.STATES.SIDE_MENU.templateUrl,
-                controller: MANI.STATES.SIDE_MENU.controller,
-                cache: MANI.STATES.SIDE_MENU.cache
+                templateUrl: SMILES.STATES.SIDE_MENU.templateUrl,
+                controller: SMILES.STATES.SIDE_MENU.controller,
+                cache: SMILES.STATES.SIDE_MENU.cache
             })
-            .state(MANI.STATES.DASHBOARD.name, {
-                url: MANI.STATES.DASHBOARD.url,
+            .state(SMILES.STATES.DASHBOARD.name, {
+                url: SMILES.STATES.DASHBOARD.url,
                 views: {
                     'menuContent': {
-                        templateUrl: MANI.STATES.DASHBOARD.templateUrl,
-                        controller: MANI.STATES.DASHBOARD.controller
+                        templateUrl: SMILES.STATES.DASHBOARD.templateUrl,
+                        controller: SMILES.STATES.DASHBOARD.controller
                     }
                 }
             })
-            .state(MANI.STATES.PROJECTS.name, {
-                url: MANI.STATES.PROJECTS.url,
+            .state(SMILES.STATES.PROJECTS.name, {
+                url: SMILES.STATES.PROJECTS.url,
                 views: {
                     'menuContent': {
-                        templateUrl: MANI.STATES.PROJECTS.templateUrl,
-                        controller: MANI.STATES.PROJECTS.controller
+                        templateUrl: SMILES.STATES.PROJECTS.templateUrl,
+                        controller: SMILES.STATES.PROJECTS.controller
                     }
                 }
             })
-            .state(MANI.STATES.PROJECTDETAIL.name, {
-                url: MANI.STATES.PROJECTDETAIL.url,
+            .state(SMILES.STATES.PROJECTDETAIL.name, {
+                url: SMILES.STATES.PROJECTDETAIL.url,
                 views: {
                     'menuContent': {
-                        templateUrl: MANI.STATES.PROJECTDETAIL.templateUrl,
-                        controller: MANI.STATES.PROJECTDETAIL.controller
+                        templateUrl: SMILES.STATES.PROJECTDETAIL.templateUrl,
+                        controller: SMILES.STATES.PROJECTDETAIL.controller
                     }
                 }
             })
-            .state(MANI.STATES.ABOUTME.name, {
-                url: MANI.STATES.ABOUTME.url,
+            .state(SMILES.STATES.ABOUTME.name, {
+                url: SMILES.STATES.ABOUTME.url,
                 views: {
                     'menuContent': {
-                        templateUrl: MANI.STATES.ABOUTME.templateUrl,
-                        controller: MANI.STATES.ABOUTME.controller
+                        templateUrl: SMILES.STATES.ABOUTME.templateUrl,
+                        controller: SMILES.STATES.ABOUTME.controller
                     }
                 }
             })
-            .state(MANI.STATES.CONTACTME.name, {
-                url: MANI.STATES.CONTACTME.url,
+            .state(SMILES.STATES.CONTACTME.name, {
+                url: SMILES.STATES.CONTACTME.url,
                 views: {
                     'menuContent': {
-                        templateUrl: MANI.STATES.CONTACTME.templateUrl,
-                        controller: MANI.STATES.CONTACTME.controller
+                        templateUrl: SMILES.STATES.CONTACTME.templateUrl,
+                        controller: SMILES.STATES.CONTACTME.controller
                     }
                 }
             });
 
-        $urlRouterProvider.otherwise(MANI.STATES.SIDE_MENU.url + MANI.STATES.DASHBOARD.url);
+        $urlRouterProvider.otherwise(SMILES.STATES.SIDE_MENU.url + SMILES.STATES.DASHBOARD.url);
         $compileProvider.debugInfoEnabled(false);
         $logProvider.debugEnabled(true);
     }

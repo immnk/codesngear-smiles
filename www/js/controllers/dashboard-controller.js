@@ -1,4 +1,4 @@
-controllers.controller(MANI.CONTROLLERS.DashboardController, DashboardController);
+controllers.controller(SMILES.CONTROLLERS.DashboardController, DashboardController);
 
 DashboardController.inject = ['$scope'];
 

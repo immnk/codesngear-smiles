@@ -1,4 +1,4 @@
-angular.module(MANI.MODULE_NAMES.LOGGER).factory(MANI.FACTORIES.Logger, Logger);
+angular.module(SMILES.MODULE_NAMES.LOGGER).factory(SMILES.FACTORIES.Logger, Logger);
 
 	Logger.$inject = ['$log'];
 
