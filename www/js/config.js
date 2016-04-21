@@ -19,8 +19,8 @@ var SMILES = {
     },
     FACTORIES : {
         WishListFactory: "WishListFactory",
-        PeopleFactory: "PeopleFactory",
         GalleryFactory: "GalleryFactory",
+        LoginFactory: "LoginFactory",
         Logger : "Logger",
         LocalStorage : "LocalStorage"
     },
@@ -30,6 +30,7 @@ var SMILES = {
             url: '/login',
             templateUrl: 'templates/login.html',
             controller: 'LoginController',
+            factory: 'LoginFactory',
             cache: false
         },
         SIDE_MENU: {
@@ -54,7 +55,7 @@ var SMILES = {
             controller: 'AboutUsController',
             cache: true
         },
-        CONTACTME: {
+        CONTACTUS: {
             name: 'app.contactus',
             url: '/contactus',
             templateUrl: 'templates/contactus.html',

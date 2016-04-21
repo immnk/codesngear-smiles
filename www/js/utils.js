@@ -8,13 +8,13 @@ function Core() {
     provider.$get = Factory;
     return provider;
 
-    Factory.$inject = ['$q', '$http', '$rootScope', '$ionicPopup', '$ionicLoading', '$ionicHistory', '$ionicSideMenuDelegate', 'Logger', 'LocalStorage', MANI.MESSAGES];
+    Factory.$inject = ['$q', '$http', '$rootScope', '$ionicPopup', '$ionicLoading', '$ionicHistory', '$ionicSideMenuDelegate', 'Logger', 'LocalStorage', SMILES.MESSAGES];
 
-    function Factory($q, $http, $rootScope, $ionicPopup, $ionicLoading, $ionicHistory, $ionicSideMenuDelegate, Logger, LocalStorage, MANI_MESSAGES) {
+    function Factory($q, $http, $rootScope, $ionicPopup, $ionicLoading, $ionicHistory, $ionicSideMenuDelegate, Logger, LocalStorage, SMILES_MESSAGES) {
         var service = {};
 
         service.Logger = Logger;
-        service.MANI_MESSAGES = MANI_MESSAGES;
+        service.SMILES_MESSAGES = SMILES_MESSAGES;
 
         service.init = init;
         service.localStorage = LocalStorage;
@@ -39,7 +39,7 @@ function Core() {
             }
             $ionicSideMenuDelegate.canDragContent(false);
 
-            $rootScope.MANI_MESSAGES = MANI_MESSAGES
+            $rootScope.SMILES_MESSAGES = SMILE;S_MESSAGES
             globalRootScope = $rootScope;
             Logger.debug("utils - init: end");
         }
@@ -74,14 +74,14 @@ function Core() {
 
             var req = {
                 method: requestType,
-                url: MANI.BACK_END.RootURL + methodName,
+                url: SMILES.BACK_END.RootURL + methodName,
                 headers: headers
             };
 
             if (requestData) {
-                if (requestType == MANI.BACK_END.RequestType.GET) {
+                if (requestType == SMILES.BACK_END.RequestType.GET) {
                     req.params = requestData;
-                } else if (requestType == MANI.BACK_END.RequestType.POST) {
+                } else if (requestType == SMILES.BACK_END.RequestType.POST) {
                     req.data = requestData;
                 }
             }
@@ -109,10 +109,10 @@ function Core() {
                 };
                 
                 if (error.status == 401) {
-                    errorResponse.error.code = MANI.BACK_END.ERROR_CODES.UNAUTHORIZED;
+                    errorResponse.error.code = SMILES.BACK_END.ERROR_CODES.UNAUTHORIZED;
                 }
                 else {
-                    errorResponse.error.code = MANI.BACK_END.ERROR_CODES.NETWORK_ERROR;
+                    errorResponse.error.code = SMILES.BACK_END.ERROR_CODES.NETWORK_ERROR;
                 }
                
                 deferred.reject(errorResponse);
@@ -128,11 +128,11 @@ function Core() {
             service.Logger.debug("$utils.handleError : start");
 
             try {
-                var message = service.MANI_MESSAGES[error.error.code];
-                message = service.MANI_MESSAGES[error.error.code];
+                var message = service.SMILES_MESSAGES[error.error.code];
+                message = service.SMILES_MESSAGES[error.error.code];
                 return message;
             } catch (e) {
-                return service.MANI_MESSAGES.NETWORK_ERROR;
+                return service.SMILES_MESSAGES.NETWORK_ERROR;
             }
 
             service.Logger.debug("$utils.handleError : end");

@@ -10,7 +10,7 @@ ion-side-menu {
     background-position: center center;
     .avatar {
         @extend .img;
-        background: #444 url('../img/user_avatar.png');
+        background: #444;
         background-size: cover;
         width: 100px;
         height: 100px;
@@ -32,7 +32,6 @@ ion-side-menu {
             .item-content {
                 background-color: rgba(255, 255, 255, 0.5);
                 padding: 15px;
-                font-family: $font-montserrat;
                 color: $font-theme-color;
                 i {
                     padding-right: 10px;
@@ -50,6 +49,6 @@ ion-side-menu {
 .buttons {
     .title {
         font-weight: bold;
-        font-family: "Montserrat";
+        
     }
 }

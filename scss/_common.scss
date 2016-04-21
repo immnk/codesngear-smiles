@@ -7,19 +7,21 @@ $theme-card-width: 200px;
 $theme-card-height: 200px;
 
 /* SASS / Social Media Brand Colors */
-
 $twitter: #00aced;
 $facebook: #3b5998;
 $googleplus: #dd4b39;
 $general: #1b926c;
+
 $font-color-white: #FFF;
 $font-color-black: #5e5e5e;
 $font-theme-color: #006551;
+
 $caption-background: #2c3f52;
 $caption-special: #ed4e6e;
+
 $quote-border: #989898;
-$font-family: "Lato", "sans-serif";
-$font-montserrat: "Montserrat", "sans-serif";
+
+$font-family: "SFUI", "sans-serif";
 @mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
     -webkit-box-shadow: $horizontal $vertical $blur $color;
     -moz-box-shadow: $horizontal $vertical $blur $color;
@@ -27,36 +29,30 @@ $font-montserrat: "Montserrat", "sans-serif";
 }
 
 @font-face {
-    font-family: Montserrat;
-    src: url(../assets/fonts/Montserrat-Regular.otf);
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Regular.otf);
 }
-
 @font-face {
-    font-family: Lato;
-    src: url(../assets/fonts/Lato-Regular.ttf);
-}
-
-@font-face {
-    font-family: Lato;
-    src: url(../assets/fonts/Lato-Light.ttf);
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Light.otf);
     font-weight: 300;
 }
 
 @font-face {
-    font-family: Lato;
-    src: url(../assets/fonts/Lato-Bold.ttf);
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Bold.otf);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: Lato;
-    src: url(../assets/fonts/Lato-Black.ttf);
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Heavy.otf);
     font-weight: 900;
 }
 
 @font-face {
-    font-family: Lato;
-    src: url(../assets/fonts/Lato-LightItalic.ttf);
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-LightItalic.otf);
     font-weight: 300;
     font-style: italic;
 }

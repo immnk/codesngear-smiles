@@ -10,7 +10,6 @@
             background-size: cover;
         }
         blockquote {
-            font-family: $font-montserrat;
             background: $caption-background;
             border-left: 10px solid $quote-border;
             margin: 10px;
@@ -39,17 +38,14 @@
             .highlight {
                 font-size: 18px;
                 border-bottom: 1.5px solid $caption-special;
-                font-family: $font-montserrat;
                 font-weight: bold;
             }
             .blink {
                 font-size: 18px;
-                font-family: $font-montserrat;
                 text-transform: capitalize;
             }
             a {
                 font-size: 18px;
-                font-family: $font-montserrat;
                 text-decoration: none;
                 border-bottom: 5px solid $quote-border;
                 color: $caption-special;

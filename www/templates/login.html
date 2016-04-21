@@ -1,0 +1,24 @@
+<ion-view view-title="Login">
+    <ion-content>
+        <div class="bar bar-header">
+            <div class="h1 title">Login</div>
+        </div>
+        <div class="login has-header">
+            <form name="loginForm" ng-submit="loginFormSubmit(loginForm)" novalidate>
+                <div class="list">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" placeholder="First Name" name="username" ng-model="loginFormObject.username" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Password</span>
+                        <input type="text" placeholder="Last Name" ng-model="loginFormObject.password" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                    </label>
+                </div>
+                <div class="padding">
+                    <button class="button button-block button-positive">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

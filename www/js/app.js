@@ -18,6 +18,12 @@ angular.module(SMILES.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.a
     function($stateProvider, $urlRouterProvider, $compileProvider, $logProvider) {
 
         $stateProvider
+            .state(SMILES.STATES.LOGIN.name, {
+                url: SMILES.STATES.LOGIN.url,
+                templateUrl: SMILES.STATES.LOGIN.templateUrl,
+                controller: SMILES.STATES.LOGIN.controller,
+                cache: SMILES.STATES.LOGIN.cache
+            })
             .state(SMILES.STATES.SIDE_MENU.name, {
                 url: SMILES.STATES.SIDE_MENU.url,
                 abstract: true,
@@ -34,44 +40,26 @@ angular.module(SMILES.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.a
                     }
                 }
             })
-            .state(SMILES.STATES.PROJECTS.name, {
-                url: SMILES.STATES.PROJECTS.url,
+            .state(SMILES.STATES.ABOUTUS.name, {
+                url: SMILES.STATES.ABOUTUS.url,
                 views: {
                     'menuContent': {
-                        templateUrl: SMILES.STATES.PROJECTS.templateUrl,
-                        controller: SMILES.STATES.PROJECTS.controller
+                        templateUrl: SMILES.STATES.ABOUTUS.templateUrl,
+                        controller: SMILES.STATES.ABOUTUS.controller
                     }
                 }
             })
-            .state(SMILES.STATES.PROJECTDETAIL.name, {
-                url: SMILES.STATES.PROJECTDETAIL.url,
+            .state(SMILES.STATES.CONTACTUS.name, {
+                url: SMILES.STATES.CONTACTUS.url,
                 views: {
                     'menuContent': {
-                        templateUrl: SMILES.STATES.PROJECTDETAIL.templateUrl,
-                        controller: SMILES.STATES.PROJECTDETAIL.controller
-                    }
-                }
-            })
-            .state(SMILES.STATES.ABOUTME.name, {
-                url: SMILES.STATES.ABOUTME.url,
-                views: {
-                    'menuContent': {
-                        templateUrl: SMILES.STATES.ABOUTME.templateUrl,
-                        controller: SMILES.STATES.ABOUTME.controller
-                    }
-                }
-            })
-            .state(SMILES.STATES.CONTACTME.name, {
-                url: SMILES.STATES.CONTACTME.url,
-                views: {
-                    'menuContent': {
-                        templateUrl: SMILES.STATES.CONTACTME.templateUrl,
-                        controller: SMILES.STATES.CONTACTME.controller
+                        templateUrl: SMILES.STATES.CONTACTUS.templateUrl,
+                        controller: SMILES.STATES.CONTACTUS.controller
                     }
                 }
             });
 
-        $urlRouterProvider.otherwise(SMILES.STATES.SIDE_MENU.url + SMILES.STATES.DASHBOARD.url);
+        $urlRouterProvider.otherwise(SMILES.STATES.LOGIN.url);
         $compileProvider.debugInfoEnabled(false);
         $logProvider.debugEnabled(true);
     }
