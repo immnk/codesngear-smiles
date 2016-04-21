@@ -11,19 +11,27 @@ var SMILES = {
         LOCAL_STORAGE : "LocalStorage"
     },
     CONTROLLERS : {
-        DashboardController : "DashboardController",
-        ProjectsController : "ProjectsController",
-        ProjectController : "ProjectController",
-        SideMenuController : "SideMenuController",
-        AboutMeController: "AboutMeController",
-        ContactMeController: "ContactMeController"
+        LoginController: "LoginController",
+        DashboardController: "DashboardController",
+        SideMenuController: "SideMenuController",
+        AboutMeController: "AboutUsController",
+        ContactMeController: "ContactUsController"
     },
-    FACTORIES :  {
-        ProjectsFactory: "ProjectsFactory",
+    FACTORIES : {
+        WishListFactory: "WishListFactory",
+        PeopleFactory: "PeopleFactory",
+        GalleryFactory: "GalleryFactory",
         Logger : "Logger",
         LocalStorage : "LocalStorage"
     },
     STATES: {
+        LOGIN: {
+            name: 'login',
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginController',
+            cache: false
+        },
         SIDE_MENU: {
             name: 'app',
             url: '/app',
@@ -39,33 +47,18 @@ var SMILES = {
             controller: 'DashboardController',
             cache: false
         },
-        PROJECTS: {
-            name: 'app.projects',
-            url: '/projects',
-            templateUrl: 'templates/project-list.html',
-            controller: 'ProjectsController',
-            factory: 'ProjectsFactory',
-            cache: true
-        },
-        PROJECTDETAIL: {
-            name: 'app.projectdetail',
-            url: '/projects/:projectId',
-            templateUrl: 'templates/project.html',
-            controller: 'ProjectController',
-            cache: false
-        },
-        ABOUTME: {
-            name: 'app.aboutme',
-            url: '/aboutme',
-            templateUrl: 'templates/aboutme.html',
-            controller: 'AboutMeController',
+        ABOUTUS: {
+            name: 'app.aboutus`',
+            url: '/aboutus',
+            templateUrl: 'templates/aboutus.html',
+            controller: 'AboutUsController',
             cache: true
         },
         CONTACTME: {
-            name: 'app.contactme',
-            url: '/contactme',
-            templateUrl: 'templates/contactme.html',
-            controller: 'ContactMeController',
+            name: 'app.contactus',
+            url: '/contactus',
+            templateUrl: 'templates/contactus.html',
+            controller: 'ContactUsController',
             cache: true
         }
     },
