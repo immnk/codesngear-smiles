@@ -24,12 +24,17 @@ angular.module(SMILES.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.a
                 controller: SMILES.STATES.LOGIN.controller,
                 cache: SMILES.STATES.LOGIN.cache
             })
+            .state(SMILES.STATES.REGISTER.name, {
+                url: SMILES.STATES.REGISTER.url,
+                templateUrl: SMILES.STATES.REGISTER.templateUrl,
+                controller: SMILES.STATES.REGISTER.controller
+            })
             .state(SMILES.STATES.SIDE_MENU.name, {
                 url: SMILES.STATES.SIDE_MENU.url,
                 abstract: true,
                 templateUrl: SMILES.STATES.SIDE_MENU.templateUrl,
                 controller: SMILES.STATES.SIDE_MENU.controller,
-                cache: SMILES.STATES.SIDE_MENU.cache
+                
             })
             .state(SMILES.STATES.DASHBOARD.name, {
                 url: SMILES.STATES.DASHBOARD.url,
@@ -37,6 +42,42 @@ angular.module(SMILES.APP_NAME, ['ionic','ionic.service.core',  'ionic.service.a
                     'menuContent': {
                         templateUrl: SMILES.STATES.DASHBOARD.templateUrl,
                         controller: SMILES.STATES.DASHBOARD.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.ACTIVITY.name, {
+                url: SMILES.STATES.ACTIVITY.url,
+                views: {
+                    'menuContent': {
+                        templateUrl: SMILES.STATES.ACTIVITY.templateUrl,
+                        controller: SMILES.STATES.ACTIVITY.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.WISHLISTDETAIL.name, {
+                url: SMILES.STATES.WISHLISTDETAIL.url,
+                views: {
+                    'menuContent': {
+                        templateUrl: SMILES.STATES.WISHLISTDETAIL.templateUrl,
+                        controller: SMILES.STATES.WISHLISTDETAIL.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.ORPHANAGE.name, {
+                url: SMILES.STATES.ORPHANAGE.url,
+                views: {
+                    'menuContent': {
+                        templateUrl: SMILES.STATES.ORPHANAGE.templateUrl,
+                        controller: SMILES.STATES.ORPHANAGE.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.ORPHANAGE_DETAIL.name, {
+                url: SMILES.STATES.ORPHANAGE_DETAIL.url,
+                views: {
+                    'menuContent': {
+                        templateUrl: SMILES.STATES.ORPHANAGE_DETAIL.templateUrl,
+                        controller: SMILES.STATES.ORPHANAGE_DETAIL.controller
                     }
                 }
             })

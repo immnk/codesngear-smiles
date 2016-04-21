@@ -1,8 +1,8 @@
-factories.factory(SMILES.FACTORIES.LoginFactory, LoginFactory);
+factories.factory(SMILES.FACTORIES.PeopleFactory, PeopleFactory);
 
-LoginFactory.$inject = ['$q', 'utils'];
+PeopleFactory.$inject = ['$q', 'utils'];
 
-function LoginFactory($q, utils) {
+function PeopleFactory($q, utils) {
     var service = {}
     service.login = login;
 

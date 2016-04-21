@@ -1,8 +1,16 @@
+controllers.controller(SMILES.CONTROLLERS.RegistrationController, RegistrationController);
+
+RegistrationController.inject = ['$scope', '$state', 'utils', 'PeopleFactory'];
+
+function RegistrationController($scope, $state, utils, PeopleFactory){
+  
+}
+
 controllers.controller(SMILES.CONTROLLERS.LoginController, LoginController);
 
-LoginController.inject = ['$scope', '$state', 'utils', 'LoginFactory'];
+LoginController.inject = ['$scope', '$state', 'utils', 'PeopleFactory'];
 
-function LoginController($scope, $state, utils, LoginFactory){
+function LoginController($scope, $state, utils, PeopleFactory){
  	$scope.loginFormObject = {
         username: '',
         password: ''
@@ -16,7 +24,7 @@ function LoginController($scope, $state, utils, LoginFactory){
 
         if (loginForm.$valid) {
             utils.showSpinner();
-            LoginFactory.login($scope.loginFormObject).then(function(user) {
+            PeopleFactory.login($scope.loginFormObject).then(function(user) {
                 $state.go(SMILES.STATES.DASHBOARD.name);
                 utils.hideSpinner();
             }, function(message) {
