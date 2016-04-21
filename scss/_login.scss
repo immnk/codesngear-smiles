@@ -1,3 +1,26 @@
-.login{
-	@extend .outer-wrapper;
+.login {
+    font-family: "SFUI", "sans-serif";
+    background: #5E5E5E url("../img/login-background.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    .form {
+        padding: 20px 20px 0px;
+        input {
+            color: $font-color-white;
+        }
+    }
+    .error {
+        opacity: 0;
+        -webkit-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+        font-weight: bold;
+        color: red;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    .make_visible {
+        opacity: 1 !important;
+    }
 }

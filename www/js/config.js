@@ -20,8 +20,7 @@ var SMILES = {
         OrphanageController: "OrphanageController",
         OrphanageDetailController: "OrphanageDetailController",
         GalleryController: "GalleryController",
-        AboutMeController: "AboutUsController",
-        ContactMeController: "ContactUsController"
+        AboutUsController: "AboutUsController"
     },
     FACTORIES: {
         GalleryFactory: "GalleryFactory",
@@ -93,19 +92,12 @@ var SMILES = {
             url: '/aboutus',
             templateUrl: 'templates/aboutus.html',
             controller: 'AboutUsController'
-        },
-        CONTACTUS: {
-            name: 'app.contactus',
-            url: '/contactus',
-            templateUrl: 'templates/contactus.html',
-            controller: 'ContactUsController'
         }
     },
     BACK_END: {
         RootURL: "http://52.70.70.64:3300/",
-        IMAGEURL: "http://satwebdev2.siriuscom.com/ela/mobiledev/imageprovider.php?methodName=getUserAvatar&eid=",
         MethodName: {
-            "login": "login",
+            "login": "Login",
             "getUserPermission": "getUserPermission",
             "getAllEmployees": "getAllEmployees",
             "getEmployeeDetails": "getEmployeeDetails",

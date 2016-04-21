@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* SASS / Social Media Brand Colors */
 @font-face {
   font-family: SFUI;
@@ -45,7 +44,7 @@ body.ionic {
   right: 0;
   background: rgba(0, 0, 0, 0.3); }
 
-.outer-wrapper, .login, .contact, .dashboard, .about {
+.outer-wrapper, .dashboard, .about {
   position: relative;
   font-family: "SFUI", "sans-serif";
   min-height: calc(100vh - 44px);
@@ -55,7 +54,7 @@ body.ionic {
 .pane {
   background-color: #101A1B !important; }
 
-.img, ion-side-menu .avatar, .about .content .mani {
+.img, ion-side-menu .avatar {
   width: 200px;
   height: 200px;
   margin: 12px auto;
@@ -64,6 +63,28 @@ body.ionic {
   -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75); }
+
+.login {
+  font-family: "SFUI", "sans-serif";
+  background: #5E5E5E url("../img/login-background.jpg") no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh; }
+  .login .form {
+    padding: 20px 20px 0px; }
+    .login .form input {
+      color: #FFF; }
+  .login .error {
+    opacity: 0;
+    -webkit-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    padding: 5px 0px; }
+  .login .make_visible {
+    opacity: 1 !important; }
 
 ion-side-menu {
   background: rgba(179, 255, 171, 0.5);
@@ -99,99 +120,7 @@ ion-side-menu {
 .buttons .title {
   font-weight: bold; }
 
-.contact .content {
-  position: relative;
-  font-family: "SFUI", "sans-serif";
-  padding: 0 20px;
-  color: #FFF;
-  overflow: auto; }
-  .contact .content h3 {
-    margin: 100px 0px 10px;
-    color: #ed4e6e;
-    font-size: 24px;
-    font-family: "SFUI", "sans-serif";
-    font-weight: 700;
-    text-align: center; }
-  .contact .content p {
-    line-height: 20px;
-    margin: 0;
-    padding: 0 0 10px;
-    text-align: center;
-    font-family: Lato;
-    font-weight: 100; }
-    .contact .content p strong {
-      text-decoration: underline; }
-  .contact .content .social {
-    list-style: none;
-    text-align: center;
-    padding: 10px 0; }
-    .contact .content .social li {
-      display: inline-block;
-      width: auto;
-      text-align: center;
-      border-radius: 50%;
-      padding: 0px; }
-      .contact .content .social li a {
-        text-decoration: none;
-        color: white;
-        padding: 20px;
-        height: 60px;
-        width: 60px;
-        display: block; }
-      .contact .content .social li:active {
-        background: rgba(0, 0, 0, 0.3); }
-    .contact .content .social .general {
-      background: #1b926c; }
-    .contact .content .social .facebook {
-      background: #3b5998; }
-    .contact .content .social .google {
-      background: #dd4b39; }
-    .contact .content .social .twitter {
-      background: #00aced; }
-
 .about {
   color: #FFF; }
-  .about .content {
-    position: relative;
-    overflow: auto; }
-    .about .content .mani {
-      background: #EEE url("../img/mani.jpg") no-repeat;
-      background-size: cover; }
-    .about .content blockquote {
-      background: #2c3f52;
-      border-left: 10px solid #989898;
-      margin: 10px;
-      padding: 16px 10px;
-      quotes: "“" "”" "‘" "’";
-      font-size: 20px;
-      color: #ed4e6e;
-      overflow: hidden; }
-      .about .content blockquote:before {
-        color: #989898;
-        content: open-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em; }
-      .about .content blockquote p {
-        display: inline;
-        float: right; }
-    .about .content .description {
-      margin: 10px;
-      padding: 0 10px;
-      font-size: 16px; }
-      .about .content .description .highlight {
-        font-size: 18px;
-        border-bottom: 1.5px solid #ed4e6e;
-        font-weight: bold; }
-      .about .content .description .blink {
-        font-size: 18px;
-        text-transform: capitalize; }
-      .about .content .description a {
-        font-size: 18px;
-        text-decoration: none;
-        border-bottom: 5px solid #989898;
-        color: #ed4e6e;
-        text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */

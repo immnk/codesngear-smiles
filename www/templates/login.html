@@ -1,24 +1,27 @@
 <ion-view view-title="Login">
     <ion-content>
-        <div class="bar bar-header">
-            <div class="h1 title">Login</div>
-        </div>
-        <div class="login has-header">
-            <form name="loginForm" ng-submit="loginFormSubmit(loginForm)" novalidate>
-                <div class="list">
+        <div class="login" ng-cloak>
+            <div class="overlay"></div>
+            <div class="content">
+                <form name="loginForm" ng-submit="loginFormSubmit(loginForm)" novalidate class="form">
                     <label class="item item-input item-floating-label">
                         <span class="input-label">Username</span>
-                        <input type="text" placeholder="First Name" name="username" ng-model="loginFormObject.username" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                        <input type="text" placeholder="Username" name="username" ng-model="loginFormObject.username" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
                     </label>
+                    <div class="message error" ng-class="{ 'make_visible' : (!loginForm.username.$pristine && loginForm.username.$invalid) || (loginForm.$submitted && loginForm.username.$invalid) }">{{ SMILES_MESSAGES.LOGIN.USERNAME_REQUIRED }}</div>
                     <label class="item item-input item-floating-label">
                         <span class="input-label">Password</span>
-                        <input type="text" placeholder="Last Name" ng-model="loginFormObject.password" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                        <input type="password" placeholder="Password" ng-model="loginFormObject.password" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
                     </label>
-                </div>
-                <div class="padding">
-                    <button class="button button-block button-positive">Sign In</button>
-                </div>
-            </form>
+                    <div class="message error" ng-class="{ 'make_visible' : (!loginForm.password.$pristine && loginForm.password.$invalid) || (loginForm.$submitted && loginForm.password.$invalid) }">{{ SMILES_MESSAGES.LOGIN.PASSWORD_REQUIRED }}</div>
+                    <div class="padding">
+                        <button class="button button-block button-positive">Sign in</button>
+                    </div>
+                    <div class="padding">
+                        <button class="button button-block button-positive">register here</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </ion-content>
 </ion-view>

@@ -39,7 +39,7 @@ function Core() {
             }
             $ionicSideMenuDelegate.canDragContent(false);
 
-            $rootScope.SMILES_MESSAGES = SMILE;S_MESSAGES
+            $rootScope.SMILES_MESSAGES = SMILES_MESSAGES
             globalRootScope = $rootScope;
             Logger.debug("utils - init: end");
         }
@@ -64,18 +64,9 @@ function Core() {
 
             var deferred = $q.defer();
 
-
-            if (!headers) {
-                var token = $rootScope.user.token;
-                headers = {
-                    'Authorization': 'Basic ' + token
-                }
-            }
-
             var req = {
                 method: requestType,
-                url: SMILES.BACK_END.RootURL + methodName,
-                headers: headers
+                url: SMILES.BACK_END.RootURL + methodName
             };
 
             if (requestData) {

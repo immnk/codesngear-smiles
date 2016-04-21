@@ -1,13 +1,7 @@
-controllers.controller(SMILES.CONTROLLERS.AboutMeController, AboutMeController);
-controllers.controller(SMILES.CONTROLLERS.ContactMeController, ContactMeController);
+controllers.controller(SMILES.CONTROLLERS.AboutUsController, AboutUsController);
 
-AboutMeController.inject = ['$scope'];
-ContactMeController.inject = ['$scope'];
+AboutUsController.inject = ['$scope'];
 
-function AboutMeController($scope){
+function AboutUsController($scope){
   
-}
-
-function ContactMeController($scope){
-	
 }
