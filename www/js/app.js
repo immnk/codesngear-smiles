@@ -1,7 +1,7 @@
 angular.module(SMILES.APP_NAME, ['ionic', 'ionic.service.core', 'ionic.service.analytics', SMILES.MODULE_NAMES.CONTROLLERS, SMILES.MODULE_NAMES.FACTORIES, SMILES.MODULE_NAMES.UTILS, SMILES.MODULE_NAMES.DIRECTIVES, SMILES.MODULE_NAMES.MESSAGES])
 
-.run(['$ionicPlatform', '$ionicAnalytics', '$state', 'utils',
-    function($ionicPlatform, $ionicAnalytics, $state, utils) {
+.run(['$ionicPlatform', '$ionicAnalytics', '$state', 'utils', '$rootScope',
+    function($ionicPlatform, $ionicAnalytics, $state, utils, $rootScope) {
 
         var user = utils.localStorage.getObject(SMILES.LOCAL_STORAGE.KEYS.USER);
         if (user) {
