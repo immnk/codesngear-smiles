@@ -49,7 +49,6 @@ var SMILES = {
             url: '/app',
             templateUrl: 'templates/menu.html',
             controller: 'SideMenuController'
-
         },
         DASHBOARD: {
             name: 'app.dashboard',
@@ -57,14 +56,20 @@ var SMILES = {
             templateUrl: 'templates/dashboard.html',
             controller: 'DashboardController'
         },
+        ORPHANAGES: {
+            name: 'app.orphanages',
+            url: '/orphanages',
+            templateUrl: 'templates/orphanages.html',
+            controller: 'OrphanageController'
+        },
         ACTIVITY: {
-            name: 'app.activity',
+            name: 'app.dashboard.activity',
             url: '/:activityId',
             templateUrl: 'templates/activity.html',
             controller: 'ActivityController'
         },
         WISHLISTDETAIL: {
-            name: 'app.activity.wishlist',
+            name: 'app.dashboard.activity.wishlist',
             url: '/:wishlistId',
             templateUrl: 'templates/wishlist_detail.html',
             controller: 'WishListDetailController'
@@ -75,15 +80,9 @@ var SMILES = {
             templateUrl: 'templates/gallery.html',
             controller: 'GalleryController'
         },
-        ORPHANAGE: {
-            name: 'app.orphanage',
-            url: '/orphanage',
-            templateUrl: 'templates/orphanages.html',
-            controller: 'OrphanageController'
-        },
         ORPHANAGE_DETAIL: {
-            name: 'app.orphangeDetail',
-            url: '/:orphangeId',
+            name: 'app.orphanages.orphanageDetail',
+            url: '/:orphanageId',
             templateUrl: 'templates/orphanage_detail.html',
             controller: 'OrphanageDetailController'
         },
@@ -99,6 +98,7 @@ var SMILES = {
         MethodName: {
             "login": "Login",
             "register": "Register",
+            "viewOrphanages": "viewOrphanages",
             "getUserPermission": "getUserPermission",
             "getAllEmployees": "getAllEmployees",
             "getEmployeeDetails": "getEmployeeDetails",
