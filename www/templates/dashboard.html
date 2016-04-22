@@ -1,12 +1,14 @@
 <ion-view view-title="Activities">
     <ion-content>
         <div class="dashboard">
-            <div class="a-card" ng-repeat="activity in data.activities" ui-sref="app.activity({activityId: activity.wishlistId})">
+            <div class="a-card" ng-repeat="activity in data.activities"> 
+<!--             ui-sref="app.activity({activityId: activity.wishlistId})" -->
+            
                 <div class="header">
                     <img ng-src="{{activity.img}}">
                     <div class="overlay"></div>
                     <div class="name">{{activity.activityName}}</div>
-                    <div class="pay"></div>
+                    <div class="pay" ng-click="control.showPopup()"></div>
                 </div>
                 <div class="description">
                     <div class="row row-center">

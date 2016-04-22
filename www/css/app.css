@@ -24,3 +24,24 @@
 .clearfix{
 	clear:both;
 }
+.paymentHeader{
+	position: relative;
+}
+.paymentIcon{
+	background: url("../img/CardinUse-96.png") #16A085;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: absolute;
+    top: -6px;
+    left: -12px;
+    background-size: contain;
+    box-shadow: 0 2px 4px gray;
+}
+.paymentHeading{
+    background-color: #16A085;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    box-shadow: 0 2px 4px gray;
+}
