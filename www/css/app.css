@@ -1,0 +1,26 @@
+/*Dashboard*/
+.list.card > .item{
+	position: relative;
+}
+.progressBar{
+	height: 10px;
+}
+.progressBar.green{
+	background: #16A085;
+	float: left;
+	width: 80%;
+}
+.progressBar.grey{
+	background: gray;
+}
+.button.dark{
+	background-color: transparent;
+}
+.button.button-positive {
+    border-color: transparent;
+    background-color: #16A085;
+    color: #fff;
+}
+.clearfix{
+	clear:both;
+}

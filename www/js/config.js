@@ -101,7 +101,9 @@ var SMILES = {
             "register": "Register",
             "viewOrphanages": "viewOrphanages",
             "getAllUserDetails": "getAllUserDetails",
-            "getUserDonatedItemDetails": "getUserDonatedItemDetails"
+            "getUserDonatedItemDetails": "getUserDonatedItemDetails",
+            "getUserAvatar": "getUserAvatar",
+            "getActivitiesList": "getActivitiesList"
         },
         RequestType: {
             GET: "GET",
