@@ -85,21 +85,21 @@ angular.module(SMILES.APP_NAME, ['ionic', 'ionic.service.core', 'ionic.service.a
                     }
                 }
             })
-            .state(SMILES.STATES.ORPHANAGE_DETAIL.name, {
-                url: SMILES.STATES.ORPHANAGE_DETAIL.url,
-                views: {
-                    'menuContent': {
-                        templateUrl: SMILES.STATES.ORPHANAGE_DETAIL.templateUrl,
-                        controller: SMILES.STATES.ORPHANAGE_DETAIL.controller
-                    }
-                }
-            })
             .state(SMILES.STATES.GALLERY.name, {
                 url: SMILES.STATES.GALLERY.url,
                 views: {
                     'menuContent': {
                         templateUrl: SMILES.STATES.GALLERY.templateUrl,
                         controller: SMILES.STATES.GALLERY.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.MANAGEMENT.name, {
+                url: SMILES.STATES.MANAGEMENT.url,
+                views: {
+                    'menuContent': {
+                        templateUrl: SMILES.STATES.MANAGEMENT.templateUrl,
+                        controller: SMILES.STATES.MANAGEMENT.controller
                     }
                 }
             })

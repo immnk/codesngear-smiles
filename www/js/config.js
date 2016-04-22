@@ -18,8 +18,8 @@ var SMILES = {
         ActivityController: "ActivityController",
         WishListDetailController: "WishListDetailController",
         OrphanageController: "OrphanageController",
-        OrphanageDetailController: "OrphanageDetailController",
         GalleryController: "GalleryController",
+        ManagementController: 'ManagementController',
         AboutUsController: "AboutUsController"
     },
     FACTORIES: {
@@ -27,6 +27,7 @@ var SMILES = {
         PeopleFactory: "PeopleFactory",
         OrphanageFactory: "OrphanageFactory",
         ActivityFactory: "ActivityFactory",
+        ManagementFactory: "ManagementFactory",
         Logger: "Logger",
         LocalStorage: "LocalStorage"
     },
@@ -63,14 +64,14 @@ var SMILES = {
             controller: 'OrphanageController'
         },
         ACTIVITY: {
-            name: 'app.dashboard.activity',
-            url: '/:activityId',
+            name: 'app.activity',
+            url: '/{activityId:int}',
             templateUrl: 'templates/activity.html',
             controller: 'ActivityController'
         },
         WISHLISTDETAIL: {
-            name: 'app.dashboard.activity.wishlist',
-            url: '/:wishlistId',
+            name: 'app.wishlist',
+            url: '/:activityId/:wishlistId',
             templateUrl: 'templates/wishlist_detail.html',
             controller: 'WishListDetailController'
         },
@@ -80,11 +81,11 @@ var SMILES = {
             templateUrl: 'templates/gallery.html',
             controller: 'GalleryController'
         },
-        ORPHANAGE_DETAIL: {
-            name: 'app.orphanages.orphanageDetail',
-            url: '/:orphanageId',
-            templateUrl: 'templates/orphanage_detail.html',
-            controller: 'OrphanageDetailController'
+        MANAGEMENT: {
+            name: 'app.management',
+            url: '/management',
+            templateUrl: 'templates/management.html',
+            controller: 'ManagementController'
         },
         ABOUTUS: {
             name: 'app.aboutus',
@@ -99,12 +100,8 @@ var SMILES = {
             "login": "Login",
             "register": "Register",
             "viewOrphanages": "viewOrphanages",
-            "getUserPermission": "getUserPermission",
-            "getAllEmployees": "getAllEmployees",
-            "getEmployeeDetails": "getEmployeeDetails",
-            "getReportingEmployees": "getReportingEmployees",
-            "updateSalesRepNum": "updateSalesRepNum",
-            "getUserAvatar": "getUserAvatar"
+            "getAllUserDetails": "getAllUserDetails",
+            "getUserDonatedItemDetails": "getUserDonatedItemDetails"
         },
         RequestType: {
             GET: "GET",

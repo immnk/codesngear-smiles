@@ -10,16 +10,10 @@ ion-side-menu {
     background-position: center center;
     .avatar {
         @extend .img;
-        background: #444;
+        background: #444 url('../img/profile.png');
         background-size: cover;
         width: 100px;
         height: 100px;
-        // margin: 20px auto;
-        // border: 1px solid $theme-border-color;
-        // border-radius: 50%;
-        // -webkit-box-shadow: 0 8px 6px -6px $theme-border-color;
-        // -moz-box-shadow: 0 8px 6px -6px $theme-border-color;
-        // box-shadow: 0 8px 6px -6px $theme-border-color;
     }
     .menu-list {
         .list {
@@ -49,6 +43,5 @@ ion-side-menu {
 .buttons {
     .title {
         font-weight: bold;
-        
     }
 }

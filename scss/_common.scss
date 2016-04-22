@@ -79,20 +79,13 @@ body.ionic {
     }
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $transparent-black-background;
-}
-
 .outer-wrapper {
     position: relative;
     font-family: $font-family;
     min-height: calc(100vh - 44px);
-    background: $theme-color url('../img/green.jpg') no-repeat;
+    background: linear-gradient(rgba(120,120,120,0.6), rgba(70, 70, 70, 0.5)), 
+        url('../img/login-background.jpg') no-repeat;
+    background-position: 50%;
     background-size: cover;
 }
 

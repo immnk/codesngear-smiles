@@ -17,13 +17,16 @@
                     <i class="icon ion-ios-home"></i>Home
                 </ion-item>
                 <ion-item menu-close ui-sref="app.gallery">
-                    <i class="icon ion-ios-home"></i>Gallery
+                    <i class="icon ion-images"></i>Gallery
                 </ion-item>
                 <ion-item menu-close ui-sref="app.orphanages">
-                    <i class="icon ion-network"></i>Orphanages
+                    <i class="icon ion-earth"></i>Orphanages
                 </ion-item>
                 <ion-item menu-close ui-sref="app.aboutus">
-                    <i class="icon ion-person"></i>Smiles Army
+                    <i class="icon ion-person-stalker"></i>About Smiles
+                </ion-item>
+                <ion-item menu-close ui-sref="app.management" ng-if="user.role == 'ARMY' || user.role == 'ADMIN'">
+                    <i class="icon ion-person"></i>Management
                 </ion-item>
             </ion-list>
             <div class="user_details">

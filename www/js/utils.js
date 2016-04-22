@@ -61,6 +61,7 @@ function Core() {
 
         function callBackend(requestType, methodName, requestData, headers) {
             Logger.debug("utils - callBackend: start");
+            $ionicLoading.show();
 
             var deferred = $q.defer();
 
@@ -89,6 +90,7 @@ function Core() {
                 Logger.debug("utils - callBackend: response: ");
                 Logger.debug(response);
 
+                $ionicLoading.hide();
                 deferred.resolve(response.data);
 
             }, function(error) {
@@ -105,7 +107,8 @@ function Core() {
                 else {
                     errorResponse.error.code = SMILES.BACK_END.ERROR_CODES.NETWORK_ERROR;
                 }
-               
+
+                $ionicLoading.hide();
                 deferred.reject(errorResponse);
             });
 

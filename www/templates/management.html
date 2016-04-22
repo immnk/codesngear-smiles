@@ -1,0 +1,24 @@
+<ion-view view-title="Management">
+    <ion-content>
+        <div class="management">
+            <div class="user-selection">
+                <div class="list search">
+                    <div class="item item-input-inset">
+                        <label class="item-input-wrapper">
+                            <input type="text" placeholder="Username" ng-model="search.userName" ng-change="filterUsers(search.userName)">
+                        </label>
+                        <button class="button icon ion-ios-search button-small" ng-click="filterUsers(search.userName)">
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <ul class="list">
+                    <li class="item user" ng-repeat="user in users" ng-click="selectUser(user)">
+                        {{ user.userName }}
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </ion-content>
+</ion-view>

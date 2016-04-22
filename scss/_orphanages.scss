@@ -1,0 +1,56 @@
+.orphanages {
+    @extend .outer-wrapper;
+    overflow: hidden;
+    .orphanage {
+        margin: 10px 12px;
+        img {
+            width: 100%;
+        }
+        .details {
+            background: #FFF;
+            padding: 10px;
+            margin-top: -5px;
+            color: $font-color-black;
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 10px 0px;
+                .acton {
+                    width: 75px;
+                    padding: 20px;
+                    text-align: center;
+                    background: rgba(180, 180, 180, 0.6);
+                    border: 1px solid rgb(180, 180, 180);
+                    border-radius: 50%;
+                    transition: all .3s ease-out;
+                    @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+                    &:active {
+                        transform: translateY(5px);
+                    }
+                }
+                .phone {
+                    @extend .acton;
+                    i {
+                        font-size: 32px;
+                        color: $general;
+                    }
+                }
+                .email {
+                    @extend .acton;
+                    i {
+                        font-size: 32px;
+                        color: $twitter;
+                    }
+                }
+                .address {
+                    @extend .acton;
+                    i {
+                        font-size: 32px;
+                        color: #BF1B39;
+                    }
+                }
+            }
+        }
+    }
+}

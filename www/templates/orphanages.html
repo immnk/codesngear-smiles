@@ -1,13 +1,30 @@
 <ion-view view-title="Orphanages">
     <ion-content>
-        <div class="orphanages">
+        <div class="orphanages" ng-cloak>
             <div class="orphanage" ng-repeat="orphanage in orphanages">
-                <div class="name">{{ orphanage.name }}</div>
-                <div class="phone">{{ orphanage.phone }}</div>
-                <div class="address">{{ orphange.address }}</div>
-                <div class="email">{{ orphanage.email }}</div>
-                <div class="description">{{ orphanage.description }}</div>
-                <div class="image">{{ orphanage.img }}</div>
+                <img ng-src="{{ orphanage.img }}" />
+                <div class="details">
+                    <h3 class="name">{{ orphanage.name }}</h3>
+                    <div class="description">{{ orphanage.description }}</div>
+                    <div class="actions">
+                        <div class="phone">
+                            <a href="tel: {{ orphanage.phone }}">
+                                <i class="ionicons ion-android-call"></i>
+                            </a>
+                        </div>
+                        <div class="address">
+                            <a href="#">
+                                <i class="ionicons ion-location"></i>
+                            </a>
+                        </div>
+                        <div class="email">
+                            <a href="mailto: {{ orphange.email }}">
+                                <i class="ionicons ion-android-mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="image">{{ orphanage.img }}</div> -->
             </div>
         </div>
     </ion-content>

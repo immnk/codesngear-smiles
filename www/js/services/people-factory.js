@@ -5,6 +5,7 @@ PeopleFactory.$inject = ['$q', 'utils'];
 function PeopleFactory($q, utils) {
     var service = {}
     service.login = login;
+    service.getAllUsers = getAllUsers;
 
     function login(loginFormObject) {
         utils.Logger.debug(SMILES.FACTORIES.PeopleFactory + ".login : start");
@@ -39,6 +40,43 @@ function PeopleFactory($q, utils) {
             })
 
         utils.Logger.debug(SMILES.FACTORIES.PeopleFactory + ".login : end");
+        return deferred.promise;
+    }
+
+    function getAllUsers() {
+        utils.Logger.debug(SMILES.FACTORIES.PeopleFactory + ".getAllUsers : start");
+
+        var deferred = $q.defer();
+        utils.callBackend(SMILES.BACK_END.RequestType.GET,
+                SMILES.BACK_END.MethodName.getAllUserDetails, {}, null)
+            .then(function(response) {
+                if (response.length > 0) {
+                    var users = [];
+                    for (i = 0; i < response.length; i++) {
+                        var user = {};
+                        var tempUser = response[i];
+
+                        user.userName = tempUser.USER_NAME;
+                        user.userId = tempUser.USER_ID;
+                        user.email = tempUser.USER_EMAIL;
+                        user.role = tempUser.USER_ROLE;
+                        user.phone = tempUser.USER_PHONE;
+                        user.address = tempUser.USER_ADDR;
+                        user.picture = tempUser.USER_PHOTO;
+
+                        users.push(user);
+                    }
+                    deferred.resolve(users);
+                } else {
+                    deferred.resolve(response);
+                }
+
+            }, function(error) {
+                var message = utils.handleError(error);
+                deferred.reject(message);
+            });
+
+        utils.Logger.debug(SMILES.FACTORIES.PeopleFactory + ".getAllUsers : end");
         return deferred.promise;
     }
 

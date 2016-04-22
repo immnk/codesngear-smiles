@@ -36,19 +36,12 @@ body.ionic {
   .bar .title {
     color: #FFF !important; }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3); }
-
-.outer-wrapper, .dashboard, .about {
+.outer-wrapper, .dashboard, .orphanages, .gallery, .management, .about {
   position: relative;
   font-family: "SFUI", "sans-serif";
   min-height: calc(100vh - 44px);
-  background: #18bc9c url("../img/green.jpg") no-repeat;
+  background: linear-gradient(rgba(120, 120, 120, 0.6), rgba(70, 70, 70, 0.5)), url("../img/login-background.jpg") no-repeat;
+  background-position: 50%;
   background-size: cover; }
 
 .pane {
@@ -96,7 +89,7 @@ ion-side-menu {
   background-size: cover;
   background-position: center center; }
   ion-side-menu .avatar {
-    background: #444;
+    background: #444 url("../img/profile.png");
     background-size: cover;
     width: 100px;
     height: 100px; }
@@ -119,6 +112,50 @@ ion-side-menu {
 
 .buttons .title {
   font-weight: bold; }
+
+.orphanages {
+  overflow: hidden; }
+  .orphanages .orphanage {
+    margin: 10px 12px; }
+    .orphanages .orphanage img {
+      width: 100%; }
+    .orphanages .orphanage .details {
+      background: #FFF;
+      padding: 10px;
+      margin-top: -5px;
+      color: #5e5e5e; }
+      .orphanages .orphanage .details .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 10px 0px; }
+        .orphanages .orphanage .details .actions .acton, .orphanages .orphanage .details .actions .phone, .orphanages .orphanage .details .actions .email, .orphanages .orphanage .details .actions .address {
+          width: 75px;
+          padding: 20px;
+          text-align: center;
+          background: rgba(180, 180, 180, 0.6);
+          border: 1px solid #b4b4b4;
+          border-radius: 50%;
+          transition: all .3s ease-out;
+          -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+          .orphanages .orphanage .details .actions .acton:active, .orphanages .orphanage .details .actions .phone:active, .orphanages .orphanage .details .actions .email:active, .orphanages .orphanage .details .actions .address:active {
+            transform: translateY(5px); }
+        .orphanages .orphanage .details .actions .phone i {
+          font-size: 32px;
+          color: #1b926c; }
+        .orphanages .orphanage .details .actions .email i {
+          font-size: 32px;
+          color: #00aced; }
+        .orphanages .orphanage .details .actions .address i {
+          font-size: 32px;
+          color: #BF1B39; }
+
+.management .user-selection .search {
+  margin-bottom: 0; }
+.management .user-selection .list .user {
+  text-transform: capitalize; }
 
 .about {
   color: #FFF; }

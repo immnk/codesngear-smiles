@@ -1,0 +1,13 @@
+.management{
+	@extend .outer-wrapper;
+	.user-selection{
+		.search{
+			margin-bottom: 0;
+		}
+		.list{
+			.user{
+				text-transform: capitalize;
+			}
+		}
+	}
+}
