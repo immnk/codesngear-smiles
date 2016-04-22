@@ -1,41 +1,65 @@
 ion-side-menu {
-    // background: linear-gradient(rgba(97, 98, 116, .7), rgba(97, 98, 116, .5)), url("../img/Kids-Smiling.png");
-    background: rgba(97, 98, 116, .7);
+    background: rgba(72, 72, 72, 0.7);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(rgba(97, 98, 116, .7), rgba(97, 98, 116, .5)), url("../img/Kids-Smiling.png");
+    background: -webkit-linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/Kids-Smiling.png");
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgba(97, 98, 116, .7), rgba(97, 98, 116, .5)), url("../img/Kids-Smiling.png");
+    background: linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/Kids-Smiling.png");
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-position: center center;
-    .avatar {
-        @extend .img;
-        background: #444 url('../img/profile.png');
-        background-size: cover;
-        width: 100px;
-        height: 100px;
+    .user_details {
+        margin-bottom: 100px;
+        .avatar {
+            @extend .img;
+            background: #444 url('../img/profile.png');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+        .row {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .user_wrapper {
+            .user_name {
+                text-transform: capitalize;
+                font-size: 24px;
+                font-weight: 700;
+                padding: 10px 0;
+            }
+            .user_addr {
+                text-transform: capitalize;
+                font-size: 18px;
+                i {
+                    color: red;
+                }
+            }
+        }
     }
     .menu-list {
         .list {
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .item {
-            background-color: $transparent-background;
-            border: $theme-border-color;
-            border-bottom-color: $font-theme-color;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            margin-left: 20px;
             .item-content {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0);
                 padding: 15px;
-                color: $font-theme-color;
+                color: #FFF;
+                font-size: 22px;
                 i {
                     padding-right: 10px;
                     font-size: 1.5em;
-                    color: $font-theme-color;
+                    color: #FFF;
                 }
                 &:active {
                     background-color: $transparent-black-background;
                 }
             }
+        }
+        .iactive {
+            border-left: 5px solid #FD8721;
         }
     }
 }

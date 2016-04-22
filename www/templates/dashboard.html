@@ -1,31 +1,37 @@
 <ion-view view-title="Activities">
     <ion-content>
         <div class="dashboard">
-            <div class="list card" ng-repeat="activity in data.activities" ui-sref="app.dashboard.activity({activityId: '1'})">
-                <div class="item item-button-right">
-                    <h2>{{activity.ACTIVITY_NAME}}</h2>
-                    <p>{{activity.ORPHANAGE_NAME}}</p>
-                    <button class="button button-positive">
-                      <i class="icon ion-card"></i>
-                    </button>
+            <div class="a-card" ng-repeat="activity in data.activities" ui-sref="app.activity({activityId: activity.wishlistId})">
+                <div class="header">
+                    <img ng-src="{{activity.img}}">
+                    <div class="overlay"></div>
+                    <div class="name">{{activity.activityName}}</div>
+                    <div class="pay"></div>
                 </div>
-                <div class="item item-image">
-                    <img src="{{activity.IMAGE}}">
+                <div class="description">
+                    <div class="row row-center">
+                        <div class="col col-25">
+                            <div class="pig-icon">
+                                <div class="completed" ng-style="{ right: activity.percentageRemaining }"></div>
+                                <div class="number">{{ activity.percentageDone }}</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="money">
+                                &#8377; {{ activity.contributed }} / &#8377; {{ activity.total }}
+                            </div>
+                            <div class="end-date">
+                                Donation End Date: {{ activity.visit }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col loc">
+                            <i class="ionicons ion-location"></i>&nbsp;{{ activity.orphanageName }}
+                        </div>
+                        <div class="col-25 btn">OPEN</div>
+                    </div>
                 </div>
-                <div class="item">
-                    <a class="button dark">
-                        Donation End Date : {{activity.VISIT_DATE}}
-                    </a>
-<!--                 <br>
-                     <button class="button button-positive">
-                      Donations open
-                    </button> -->
-                    <br>
-                    <div class="button dark">Donated Amount : Rs.3000/Rs.4500</div><br>
-                    <div class="progressBar green"></div>
-                    <div class="progressBar grey"></div>                    
-                </div>
-
             </div>
         </div>
     </ion-content>

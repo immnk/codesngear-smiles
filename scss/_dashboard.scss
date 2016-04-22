@@ -1,6 +1,93 @@
 .dashboard {
     @extend .outer-wrapper;
-    .content {
-        
+    overflow: hidden;
+    .a-card {
+        margin: 10px 10px;
+        position: relative;
+        @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+        .header {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .overlay {
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .name {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                z-index: 11;
+                font-size: 26px;
+            }
+            .pay {
+                position: absolute;
+                right: 20px;
+                bottom: -37.5px;
+                z-index: 11;
+                background: rgb(26, 144, 114) url('../img/CardinUse-96.png');
+                height: 75px;
+                width: 75px;
+                border-radius: 50%;
+                background-size: cover;
+            }
+        }
+        .description {
+            background: #FFF;
+            color: black;
+            padding-top: 30px;
+            .pig-icon {
+                background: #EEE url("../img/MoneyBox-100.png");
+                width: 70px;
+                height: 70px;
+                background-size: cover;
+                border: 1px solid #C7C7C7;
+                position: relative;
+                .completed {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: rgba(26, 144, 114, 0.63);
+                }
+                .number{
+                	position: absolute;
+                	left: 0;
+                	right: 0;
+                	top: 0;
+                	right: 0;
+                	font-size: 22px;
+                	color: white;
+                	font-weight: 700;
+                	z-index: 10;
+                	line-height: 70px;
+                	text-align: center;
+                	vertical-align: middle;
+                }
+            }
+            .money {
+                font-size: 20px;
+                padding-bottom: 15px;
+            }
+            .end-date {
+                font-size: 16px;
+            }
+            .loc {
+                font-size: 18px;
+                color: #6F6C6B;
+            }
+            .btn {
+                background: $twitter;
+                padding: 7px;
+                color: white;
+                text-align: center;
+            }
+        }
     }
 }

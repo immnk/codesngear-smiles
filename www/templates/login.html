@@ -1,8 +1,8 @@
 <ion-view view-title="Login">
     <ion-content>
         <div class="login" ng-cloak>
-            <div class="overlay"></div>
             <div class="content">
+                <div class="logo"></div>
                 <form name="loginForm" ng-submit="loginFormSubmit(loginForm)" novalidate class="form">
                     <label class="item item-input item-floating-label">
                         <span class="input-label">Username</span>
@@ -14,12 +14,11 @@
                         <input type="password" placeholder="Password" ng-model="loginFormObject.password" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
                     </label>
                     <div class="message error" ng-class="{ 'make_visible' : (!loginForm.password.$pristine && loginForm.password.$invalid) || (loginForm.$submitted && loginForm.password.$invalid) }">{{ SMILES_MESSAGES.LOGIN.PASSWORD_REQUIRED }}</div>
-                    <div class="padding">
-                        <button class="button button-block button-positive">Sign in</button>
-                    </div>
+                    <button class="button button-block button-positive">Sign in</button>
                 </form>
-                <div class="padding">
-                    <button class="button button-block button-positive" ng-click="navigateRegister()">register here</button>
+                <div class="btn-wrap">
+                    <a href="#" class="btn-line">don't have an account?</a>
+                    <a href="#" class="btn-line">forgot password</a>
                 </div>
             </div>
         </div>

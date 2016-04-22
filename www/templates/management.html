@@ -18,7 +18,30 @@
                     </li>
                 </ul>
             </div>
-            
+            <div class="transactions">
+                <div class="tr-card" ng-repeat="transaction in transactions">
+                    <div class="heading">
+                        <div class="row row-center">
+                            <div class="col col-25">
+                                <img src="../img/profile.png">
+                            </div>
+                            <div class="col">
+                                <h2>{{ transaction.itemName}}</h2>
+                            </div>
+                            <div class="col">
+                                <div class="qty">{{ transaction.qty }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        {{ transaction.itemDesc }}
+                    </div>
+                    <div class="actions">
+                        <button class="button button-balanced take">Accept</button>
+                        <button class="button button-assertive reject">Reject</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>

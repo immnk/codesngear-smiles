@@ -47,7 +47,7 @@ body.ionic {
 .pane {
   background-color: #101A1B !important; }
 
-.img, ion-side-menu .avatar {
+.img, ion-side-menu .user_details .avatar {
   width: 200px;
   height: 200px;
   margin: 12px auto;
@@ -59,59 +59,200 @@ body.ionic {
 
 .login {
   font-family: "SFUI", "sans-serif";
-  background: #5E5E5E url("../img/login-background.jpg") no-repeat;
+  background: -webkit-linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/login-background.jpg") no-repeat;
+  background: linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/login-background.jpg") no-repeat;
   background-position: 50%;
   background-size: cover;
   position: relative;
   min-height: 100vh; }
-  .login .form {
-    padding: 20px 20px 0px; }
-    .login .form input {
-      color: #FFF; }
-  .login .error {
-    opacity: 0;
-    -webkit-transition: opacity .2s linear;
-    transition: opacity .2s linear;
-    font-weight: bold;
-    color: red;
-    text-align: center;
-    padding: 5px 0px; }
-  .login .make_visible {
-    opacity: 1 !important; }
+  .login .content {
+    position: absolute;
+    bottom: 0; }
+    .login .content .logo {
+      background: rgba(238, 238, 238, 0) url("../img/Logo.png");
+      width: 120px;
+      height: 120px;
+      background-size: contain;
+      margin: 10px auto;
+      -webkit-box-shadow: 0px 0px 8px #CCC;
+      -moz-box-shadow: 0px 0px 8px #CCC;
+      box-shadow: 0px 0px 8px #CCC; }
+    .login .content .form {
+      padding: 20px 20px 0px; }
+      .login .content .form input {
+        color: #FFF;
+        font-size: 20px; }
+      .login .content .form .item {
+        border-top: none;
+        border-left: none;
+        border-right: none; }
+        .login .content .form .item .input-label {
+          text-transform: uppercase;
+          letter-spacing: 6px;
+          color: #EEE; }
+        .login .content .form .item input::-webkit-input-placeholder {
+          text-transform: uppercase;
+          letter-spacing: 6px; }
+      .login .content .form .button {
+        background: white;
+        border-radius: 50px;
+        padding: 12px;
+        font-size: 24px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        color: black;
+        margin: 18px 0; }
+    .login .content .error {
+      opacity: 0;
+      -webkit-transition: opacity .2s linear;
+      transition: opacity .2s linear;
+      font-weight: bold;
+      color: red;
+      text-align: center;
+      padding: 5px 0px; }
+    .login .content .make_visible {
+      opacity: 1 !important; }
+    .login .content .btn-wrap {
+      text-align: center;
+      padding: 20px 10px; }
+      .login .content .btn-wrap .btn-line {
+        color: #FFF;
+        text-transform: uppercase;
+        margin: 5px 10px;
+        font-size: 13px;
+        font-weight: 100;
+        letter-spacing: 1px; }
 
 ion-side-menu {
-  background: rgba(97, 98, 116, 0.7);
+  background: rgba(72, 72, 72, 0.7);
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(rgba(97, 98, 116, 0.7), rgba(97, 98, 116, 0.5)), url("../img/Kids-Smiling.png");
+  background: -webkit-linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/Kids-Smiling.png");
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(rgba(97, 98, 116, 0.7), rgba(97, 98, 116, 0.5)), url("../img/Kids-Smiling.png");
+  background: linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/Kids-Smiling.png");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-position: center center; }
-  ion-side-menu .avatar {
-    background: #444 url("../img/profile.png");
-    background-size: cover;
-    width: 100px;
-    height: 100px; }
+  ion-side-menu .user_details {
+    margin-bottom: 100px; }
+    ion-side-menu .user_details .avatar {
+      background: #444 url("../img/profile.png");
+      background-size: cover;
+      width: 100px;
+      height: 100px; }
+    ion-side-menu .user_details .row {
+      background: rgba(0, 0, 0, 0.2); }
+    ion-side-menu .user_details .user_wrapper .user_name {
+      text-transform: capitalize;
+      font-size: 24px;
+      font-weight: 700;
+      padding: 10px 0; }
+    ion-side-menu .user_details .user_wrapper .user_addr {
+      text-transform: capitalize;
+      font-size: 18px; }
+      ion-side-menu .user_details .user_wrapper .user_addr i {
+        color: red; }
   ion-side-menu .menu-list .list {
-    margin-top: 20px; }
+    margin-top: 40px; }
   ion-side-menu .menu-list .item {
     background-color: rgba(255, 255, 255, 0);
-    border: #676767;
-    border-bottom-color: #006551; }
+    border: none;
+    margin-left: 20px; }
     ion-side-menu .menu-list .item .item-content {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0);
       padding: 15px;
-      color: #006551; }
+      color: #FFF;
+      font-size: 22px; }
       ion-side-menu .menu-list .item .item-content i {
         padding-right: 10px;
         font-size: 1.5em;
-        color: #006551; }
+        color: #FFF; }
       ion-side-menu .menu-list .item .item-content:active {
         background-color: rgba(0, 0, 0, 0.3); }
+  ion-side-menu .menu-list .iactive {
+    border-left: 5px solid #FD8721; }
 
 .buttons .title {
   font-weight: bold; }
+
+.dashboard {
+  overflow: hidden; }
+  .dashboard .a-card {
+    margin: 10px 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+    .dashboard .a-card .header {
+      position: relative; }
+      .dashboard .a-card .header img {
+        width: 100%; }
+      .dashboard .a-card .header .overlay {
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+      .dashboard .a-card .header .name {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        z-index: 11;
+        font-size: 26px; }
+      .dashboard .a-card .header .pay {
+        position: absolute;
+        right: 20px;
+        bottom: -37.5px;
+        z-index: 11;
+        background: #1a9072 url("../img/CardinUse-96.png");
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        background-size: cover; }
+    .dashboard .a-card .description {
+      background: #FFF;
+      color: black;
+      padding-top: 30px; }
+      .dashboard .a-card .description .pig-icon {
+        background: #EEE url("../img/MoneyBox-100.png");
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+        border: 1px solid #C7C7C7;
+        position: relative; }
+        .dashboard .a-card .description .pig-icon .completed {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(26, 144, 114, 0.63); }
+        .dashboard .a-card .description .pig-icon .number {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          right: 0;
+          font-size: 22px;
+          color: white;
+          font-weight: 700;
+          z-index: 10;
+          line-height: 70px;
+          text-align: center;
+          vertical-align: middle; }
+      .dashboard .a-card .description .money {
+        font-size: 20px;
+        padding-bottom: 15px; }
+      .dashboard .a-card .description .end-date {
+        font-size: 16px; }
+      .dashboard .a-card .description .loc {
+        font-size: 18px;
+        color: #6F6C6B; }
+      .dashboard .a-card .description .btn {
+        background: #00aced;
+        padding: 7px;
+        color: white;
+        text-align: center; }
 
 .orphanages {
   overflow: hidden; }
@@ -156,6 +297,45 @@ ion-side-menu {
   margin-bottom: 0; }
 .management .user-selection .list .user {
   text-transform: capitalize; }
+.management .transactions .tr-card {
+  background: #FFF;
+  margin: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+  .management .transactions .tr-card .heading {
+    border-bottom: 1px solid black; }
+    .management .transactions .tr-card .heading img {
+      width: 80px;
+      height: 80px; }
+    .management .transactions .tr-card .heading h2 {
+      text-transform: capitalize; }
+    .management .transactions .tr-card .heading .qty {
+      background: red;
+      padding: 5px;
+      color: white;
+      border: 1px solid red;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 30px;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 16px;
+      font-weight: 900; }
+  .management .transactions .tr-card .description {
+    color: black;
+    padding: 10px 0;
+    font-weight: 200;
+    font-size: 15px; }
+    .management .transactions .tr-card .description:first-letter {
+      text-transform: capitalize; }
+  .management .transactions .tr-card .actions {
+    text-align: center; }
+    .management .transactions .tr-card .actions .button {
+      margin: 0 10px; }
 
 .about {
   color: #FFF; }

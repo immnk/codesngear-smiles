@@ -1,13 +1,61 @@
-.management{
-	@extend .outer-wrapper;
-	.user-selection{
-		.search{
-			margin-bottom: 0;
-		}
-		.list{
-			.user{
-				text-transform: capitalize;
-			}
-		}
-	}
+.management {
+    @extend .outer-wrapper;
+    .user-selection {
+        .search {
+            margin-bottom: 0;
+        }
+        .list {
+            .user {
+                text-transform: capitalize;
+            }
+        }
+    }
+    .transactions {
+        .tr-card {
+            background: #FFF;
+            margin: 10px;
+            padding: 10px;
+            @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+            .heading {
+                border-bottom: 1px solid black;
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+                h2 {
+                    text-transform: capitalize;
+                }
+                .qty {
+                    background: red;
+                    padding: 5px;
+                    color: white;
+                    border: 1px solid red;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin: 0 auto;
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+            }
+            .description {
+                color: black;
+                padding: 10px 0;
+                font-weight: 200;
+                font-size: 15px;
+                &:first-letter {
+                    text-transform: capitalize;
+                }
+            }
+            .actions{
+            	text-align: center;
+            	.button{
+            		margin: 0 10px;
+            	}
+            }
+        }
+    }
 }

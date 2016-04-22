@@ -5,6 +5,7 @@ ManagementController.inject = ['$scope', 'ManagementFactory', 'PeopleFactory'];
 function ManagementController($scope, ManagementFactory, PeopleFactory) {
     $scope.allUsers = [];
     $scope.users = [];
+    $scope.transactions = [];
     $scope.search = {
         'userName': ''
     };
@@ -29,24 +30,32 @@ function ManagementController($scope, ManagementFactory, PeopleFactory) {
 
     function filterUsers(searchTerm) {
         $scope.users = [];
+        $scope.transactions = [];
         $scope.selectedUser = {};
         if (searchTerm == "") {
             $scope.users = $scope.allUsers;
         } else {
-        	for (i = 0; i < $scope.allUsers.length; i++) {
+            for (i = 0; i < $scope.allUsers.length; i++) {
                 var user = $scope.allUsers[i];
                 var userName = user.userName;
-                
+
                 if (userName.indexOf(searchTerm) > -1) {
-                	$scope.users.push(user);
+                    $scope.users.push(user);
                 }
             }
         }
     }
 
-    function selectUser(user){
-    	$scope.selectedUser = user;
-    	$scope.search.userName = user.userName;
-    	$scope.users = [];
+    function selectUser(user) {
+        $scope.selectedUser = user;
+        $scope.search.userName = user.userName;
+        $scope.users = [];
+        ManagementFactory.getUserClaimedItemDetails(user.userId)
+            .then(function(transactions) {
+                $scope.transactions = transactions;
+            }, function(error) {
+                $scope.error.error = true;
+                $scope.error.errMsg = error;
+            });
     }
 }

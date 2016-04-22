@@ -13,31 +13,39 @@
     <ion-side-menu side="left">
         <ion-content>
             <ion-list class="menu-list">
-                <ion-item menu-close ui-sref="app.dashboard">
+                <ion-item menu-close ui-sref="app.dashboard" ui-sref-active="iactive">
                     <i class="icon ion-ios-home"></i>Home
                 </ion-item>
-                <ion-item menu-close ui-sref="app.gallery">
+                <ion-item menu-close ui-sref="app.gallery" ui-sref-active="iactive">
                     <i class="icon ion-images"></i>Gallery
                 </ion-item>
-                <ion-item menu-close ui-sref="app.orphanages">
+                <ion-item menu-close ui-sref="app.orphanages" ui-sref-active="iactive">
                     <i class="icon ion-earth"></i>Orphanages
                 </ion-item>
-                <ion-item menu-close ui-sref="app.aboutus">
+                <ion-item menu-close ui-sref="app.aboutus" ui-sref-active="iactive">
                     <i class="icon ion-person-stalker"></i>About Smiles
                 </ion-item>
-                <ion-item menu-close ui-sref="app.management" ng-if="user.role == 'ARMY' || user.role == 'ADMIN'">
+                <ion-item menu-close ui-sref="app.management" ng-if="user.role == 'ARMY' || user.role == 'ADMIN'" ui-sref-active="iactive">
                     <i class="icon ion-person"></i>Management
                 </ion-item>
             </ion-list>
             <div class="user_details">
                 <div class="avatar">
                 </div>
-                <div class="user_wrapper">
-                    <div class="user_name">{{ user.userName }}</div>
-                    <div class="user_addr">{{ user.address }}</div>
+                <div class="row row-center">
+                    <div class="col">
+                        <div class="user_wrapper">
+                            <div class="user_name">{{ user.userName }}</div>
+                            <div class="user_addr">
+                                <i class="ionicons ion-location"></i>{{ user.address }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <button class="logout button icon ion-log-out" ng-click="logout()">
+                        </button>
+                    </div>
                 </div>
-                <button class="logout button icon ion-log-out" ng-click="logout()">
-                </button>
             </div>
         </ion-content>
     </ion-side-menu>

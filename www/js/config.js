@@ -103,7 +103,8 @@ var SMILES = {
             "getAllUserDetails": "getAllUserDetails",
             "getUserDonatedItemDetails": "getUserDonatedItemDetails",
             "getUserAvatar": "getUserAvatar",
-            "getActivitiesList": "getActivitiesList"
+            "getActivitiesList": "getActivitiesList",
+            "getUserClaimedItemDetails": "viewClaimsofDonor"
         },
         RequestType: {
             GET: "GET",
