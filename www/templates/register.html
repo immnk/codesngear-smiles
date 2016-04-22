@@ -1,0 +1,24 @@
+<ion-view view-title="Register">
+    <ion-content>
+        <div class="register" ng-cloak>
+            <div class="overlay"></div>
+            <div class="content">
+                <form name="registerForm" ng-submit="registerFormSubmit(registerForm)" novalidate class="form">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" placeholder="Username" name="username" ng-model="registerFormObject.username" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                    </label>
+                    <div class="message error" ng-class="{ 'make_visible' : (!registerForm.username.$pristine && registerForm.username.$invalid) || (registerForm.$submitted && registerForm.username.$invalid) }">{{ SMILES_MESSAGES.LOGIN.USERNAME_REQUIRED }}</div>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="Password" ng-model="registerFormObject.password" autocorrect="off" autocomplete="none" autocapitalize="off" spellcheck="false" required>
+                    </label>
+                    <div class="message error" ng-class="{ 'make_visible' : (!registerForm.password.$pristine && registerForm.password.$invalid) || (registerForm.$submitted && registerForm.password.$invalid) }">{{ SMILES_MESSAGES.LOGIN.PASSWORD_REQUIRED }}</div>
+                    <div class="padding">
+                        <button class="button button-block button-positive">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

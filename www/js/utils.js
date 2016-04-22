@@ -73,6 +73,9 @@ function Core() {
                 if (requestType == SMILES.BACK_END.RequestType.GET) {
                     req.params = requestData;
                 } else if (requestType == SMILES.BACK_END.RequestType.POST) {
+                    req.headers = {
+                        'Content-Type': 'application/json',
+                    };
                     req.data = requestData;
                 }
             }
@@ -86,11 +89,8 @@ function Core() {
                 Logger.debug("utils - callBackend: response: ");
                 Logger.debug(response);
 
-                if (response.data.success) {
-                    deferred.resolve(response.data);
-                } else {
-                    deferred.reject(response.data);
-                }
+                deferred.resolve(response.data);
+
             }, function(error) {
                 Logger.error(error);
                 

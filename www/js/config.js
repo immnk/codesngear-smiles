@@ -98,6 +98,7 @@ var SMILES = {
         RootURL: "http://52.70.70.64:3300/",
         MethodName: {
             "login": "Login",
+            "register": "Register",
             "getUserPermission": "getUserPermission",
             "getAllEmployees": "getAllEmployees",
             "getEmployeeDetails": "getEmployeeDetails",

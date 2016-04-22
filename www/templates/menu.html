@@ -1,34 +1,41 @@
 <ion-side-menus enable-menu-with-back-views="false">
-  <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-      </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-nav-view name="menuContent"></ion-nav-view>
-  </ion-side-menu-content>
-
-  <ion-side-menu side="left">
-    <ion-content>
-      <div class="avatar"></div>
-      <ion-list class="menu-list">
-        <ion-item menu-close href="#/app/dashboard">
-          <i class="icon ion-ios-home"></i>Home
-        </ion-item>
-        <ion-item menu-close href="#/app/gallery">
-          <i class="icon ion-ios-home"></i>Gallery
-        </ion-item>
-        <ion-item menu-close href="#/app/orphanage">
-          <i class="icon ion-network"></i>Orphanages
-        </ion-item>
-        <ion-item menu-close href="#/app/aboutus">
-          <i class="icon ion-person"></i>Smiles Army
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-content>
+            <ion-list class="menu-list">
+                <ion-item menu-close href="#/app/dashboard">
+                    <i class="icon ion-ios-home"></i>Home
+                </ion-item>
+                <ion-item menu-close href="#/app/gallery">
+                    <i class="icon ion-ios-home"></i>Gallery
+                </ion-item>
+                <ion-item menu-close href="#/app/orphanage">
+                    <i class="icon ion-network"></i>Orphanages
+                </ion-item>
+                <ion-item menu-close href="#/app/aboutus">
+                    <i class="icon ion-person"></i>Smiles Army
+                </ion-item>
+            </ion-list>
+            <div class="user_details">
+                <div class="avatar">
+                </div>
+                <div class="user_wrapper">
+                    <div class="user_name">{{ user.userName }}</div>
+                    <div class="user_addr">{{ user.address }}</div>
+                </div>
+                <button class="logout button icon ion-log-out" ng-click="logout()">
+                </button>
+            </div>
+        </ion-content>
+    </ion-side-menu>
 </ion-side-menus>

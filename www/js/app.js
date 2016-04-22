@@ -2,6 +2,15 @@ angular.module(SMILES.APP_NAME, ['ionic', 'ionic.service.core', 'ionic.service.a
 
 .run(['$ionicPlatform', '$ionicAnalytics', '$state', 'utils',
     function($ionicPlatform, $ionicAnalytics, $state, utils) {
+
+        var user = utils.localStorage.getObject(SMILES.LOCAL_STORAGE.KEYS.USER);
+        if (user) {
+            $rootScope.user = user;
+            $state.go(SMILES.STATES.DASHBOARD.name);
+        } else {
+            $state.go(SMILES.STATES.LOGIN.name);
+        }
+
         $ionicPlatform.ready(function() {
             $ionicAnalytics.register();
             if (window.cordova && window.cordova.plugins.Keyboard) {
