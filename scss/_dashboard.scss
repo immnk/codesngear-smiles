@@ -15,7 +15,7 @@
                 z-index: 10;
                 position: absolute;
                 top: 0;
-                bottom: 0;
+                bottom: 5px;
                 left: 0;
                 right: 0;
             }
@@ -42,6 +42,7 @@
             background: #FFF;
             color: black;
             padding-top: 30px;
+            margin-top: -5px;
             .pig-icon {
                 background: #EEE url("../img/MoneyBox-100.png");
                 width: 70px;

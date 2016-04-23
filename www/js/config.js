@@ -104,7 +104,10 @@ var SMILES = {
             "getUserDonatedItemDetails": "getUserDonatedItemDetails",
             "getUserAvatar": "getUserAvatar",
             "getActivitiesList": "getActivitiesList",
-            "getUserClaimedItemDetails": "viewClaimsofDonor"
+            "getUserClaimedItemDetails": "viewClaimsofDonor",
+            "getWishListItems" : "getWishList",
+            "getWishListTotalValue": "getWishListTotalValue",
+            "getWishlistItemsReceivedCost": "getWishlistItemsReceivedCost"
         },
         RequestType: {
             GET: "GET",

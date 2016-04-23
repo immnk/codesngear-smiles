@@ -36,7 +36,7 @@ body.ionic {
   .bar .title {
     color: #FFF !important; }
 
-.outer-wrapper, .dashboard, .orphanages, .gallery, .management, .about {
+.outer-wrapper, .dashboard, .orphanages, .gallery, .management, .activity, .about {
   position: relative;
   font-family: "SFUI", "sans-serif";
   min-height: calc(100vh - 44px);
@@ -191,7 +191,7 @@ ion-side-menu {
         z-index: 10;
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 5px;
         left: 0;
         right: 0; }
       .dashboard .a-card .header .name {
@@ -213,7 +213,8 @@ ion-side-menu {
     .dashboard .a-card .description {
       background: #FFF;
       color: black;
-      padding-top: 30px; }
+      padding-top: 30px;
+      margin-top: -5px; }
       .dashboard .a-card .description .pig-icon {
         background: #EEE url("../img/MoneyBox-100.png");
         width: 70px;
@@ -336,6 +337,24 @@ ion-side-menu {
     text-align: center; }
     .management .transactions .tr-card .actions .button {
       margin: 0 10px; }
+
+.activity .item {
+  margin: 10px 0;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+  .activity .item .item-img img {
+    width: 80px; }
+  .activity .item .item-description {
+    padding: 0 10px; }
+    .activity .item .item-description .item-name {
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 18px; }
+    .activity .item .item-description .description {
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: 200; }
 
 .about {
   color: #FFF; }

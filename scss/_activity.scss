@@ -1,0 +1,28 @@
+.activity {
+    @extend .outer-wrapper;
+    .item {
+        margin: 10px 0;
+        @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+        .item-img {
+            img {
+                width: 80px;
+            }
+        }
+        .item-description {
+            padding: 0 10px;
+            .item-name {
+                font-weight: 700;
+                text-transform: capitalize;
+                font-size: 18px;
+            }
+            .description {
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 200;
+            }
+            .qty {}
+            .price {}
+            .item-recv {}
+        }
+    }
+}

@@ -1,11 +1,24 @@
 <ion-view view-title="Activity">
     <ion-content>
-		<div class="list">
-		    <a class="item item-thumbnail-left" href="#">
-		      <img src="cover.jpg">
-		      <h2>Pretty Hate Machine</h2>
-		      <p>Nine Inch Nails</p>
-		    </a>
-		</div>
+        <div class="activity">
+            <div class="item row row-center" ng-repeat="item in items">
+                <div class="col item-img">
+                    <img ng-src="{{ item.itemImg }}">
+                </div>
+                <div class="col col-60 item-description">
+                    <div class="item-name">{{ item.itemName }}</div>
+                    <div class="description">{{ item.description }}</div>
+                    <div class="qty">Quantity required - {{ item.qty }}</div>
+                    <div class="price">Approxmiate price - {{ item.apprPrice }}</div>
+                    <div class="item-recv">{{ item.itemRecv }}</div>
+                </div>
+                <div class="col  donate">
+                	<div class="hand">
+                		<i class="ionicons ion-android-hand"></i>
+                	</div>
+                	<div>Donate</div>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

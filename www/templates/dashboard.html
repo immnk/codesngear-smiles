@@ -1,9 +1,8 @@
 <ion-view view-title="Activities">
     <ion-content>
-        <div class="dashboard">
-            <div class="a-card" ng-repeat="activity in data.activities"> 
-<!--             ui-sref="app.activity({activityId: activity.wishlistId})" -->
-            
+        <div class="dashboard" ng-cloak>
+            <div class="a-card" ng-repeat="activity in data.activities">
+                <!--             ui-sref="app.activity({activityId: activity.wishlistId})" -->
                 <div class="header">
                     <img ng-src="{{activity.img}}">
                     <div class="overlay"></div>
@@ -31,7 +30,7 @@
                         <div class="col loc">
                             <i class="ionicons ion-location"></i>&nbsp;{{ activity.orphanageName }}
                         </div>
-                        <div class="col-25 btn">OPEN</div>
+                        <div class="col-25 btn" ui-sref="app.activity({activityId: activity.wishlistId})">OPEN</div>
                     </div>
                 </div>
             </div>
