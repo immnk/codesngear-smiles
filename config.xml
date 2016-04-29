@@ -2,13 +2,16 @@
 <widget id="com.ionicframework.smiles682533" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>smiles</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Smiles app for e-charity
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+  <author email="manikanta.tankala@siriuscom.com" href="http://siriuscom.com/">
+      Sirius Mobile Dev
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="tel:*" launch-external="yes"/>
+  <access origin="mailto:*" launch-external="yes"/>
+  <allow-navigation href="http://52.70.70.64/*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -36,15 +39,7 @@
     <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
     <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
     <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
-    <splash src="resources/ios/splash/Default-568h@2x~iphone.png" height="1136" width="640"/>
-    <splash src="resources/ios/splash/Default-667h.png" height="1334" width="750"/>
-    <splash src="resources/ios/splash/Default-736h.png" height="2208" width="1242"/>
-    <splash src="resources/ios/splash/Default-Landscape-736h.png" height="1242" width="2208"/>
-    <splash src="resources/ios/splash/Default-Landscape@2x~ipad.png" height="1536" width="2048"/>
-    <splash src="resources/ios/splash/Default-Landscape~ipad.png" height="768" width="1024"/>
-    <splash src="resources/ios/splash/Default-Portrait@2x~ipad.png" height="2048" width="1536"/>
-    <splash src="resources/ios/splash/Default-Portrait~ipad.png" height="1024" width="768"/>
-    <splash src="resources/ios/splash/Default@2x~iphone.png" height="960" width="640"/>
-    <splash src="resources/ios/splash/Default~iphone.png" height="480" width="320"/>
+    <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
   </platform>
+  <icon src="resources/ios/icon/icon-small@3x.png"/>
 </widget>
