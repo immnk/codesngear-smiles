@@ -67,7 +67,9 @@ body.ionic {
   min-height: 100vh; }
   .login .content {
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    left: 0;
+    right: 0; }
     .login .content .logo {
       background: rgba(238, 238, 238, 0) url("../img/Logo.png");
       width: 120px;
@@ -76,12 +78,14 @@ body.ionic {
       margin: 10px auto;
       -webkit-box-shadow: 0px 0px 8px #CCC;
       -moz-box-shadow: 0px 0px 8px #CCC;
-      box-shadow: 0px 0px 8px #CCC; }
+      box-shadow: 0px 0px 8px #CCC;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.5); }
     .login .content .form {
       padding: 20px 20px 0px; }
       .login .content .form input {
         color: #FFF;
-        font-size: 20px; }
+        font-size: 16px; }
       .login .content .form .item {
         border-top: none;
         border-left: none;
@@ -96,12 +100,12 @@ body.ionic {
       .login .content .form .button {
         background: white;
         border-radius: 50px;
-        padding: 12px;
-        font-size: 24px;
+        padding: 8px;
+        font-size: 20px;
         font-weight: 100;
         letter-spacing: 2px;
         color: black;
-        margin: 18px 0; }
+        margin: 10px 0; }
     .login .content .error {
       opacity: 0;
       -webkit-transition: opacity .2s linear;
@@ -109,19 +113,23 @@ body.ionic {
       font-weight: bold;
       color: red;
       text-align: center;
-      padding: 5px 0px; }
+      padding: 5px 0px 0px; }
     .login .content .make_visible {
       opacity: 1 !important; }
     .login .content .btn-wrap {
       text-align: center;
-      padding: 20px 10px; }
+      padding: 20px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
       .login .content .btn-wrap .btn-line {
         color: #FFF;
         text-transform: uppercase;
-        margin: 5px 10px;
+        margin: 0px auto;
         font-size: 13px;
         font-weight: 100;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        padding: 5px; }
 
 ion-side-menu {
   background: rgba(72, 72, 72, 0.7);
