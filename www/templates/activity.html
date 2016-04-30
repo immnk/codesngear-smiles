@@ -1,24 +1,21 @@
-<ion-view view-title="Activity">
-    <ion-content>
-        <div class="activity">
-            <div class="item row row-center" ng-repeat="item in items">
-                <div class="col item-img">
-                    <img ng-src="{{ item.itemImg }}">
-                </div>
-                <div class="col col-60 item-description">
-                    <div class="item-name">{{ item.itemName }}</div>
-                    <div class="description">{{ item.description }}</div>
-                    <div class="qty">Quantity required - {{ item.qty }}</div>
-                    <div class="price">Approxmiate price - {{ item.apprPrice }}</div>
-                    <div class="item-recv">{{ item.itemRecv }}</div>
-                </div>
-                <div class="col  donate">
-                	<div class="hand">
-                		<i class="ionicons ion-android-hand"></i>
-                	</div>
-                	<div>Donate</div>
-                </div>
-            </div>
-        </div>
-    </ion-content>
-</ion-view>
+<!-- <ion-tabs class="">
+
+    <ion-tab title="Wishlist Items" href="#/app/activity/wishlist">
+        <ion-nav-view name="wishlisttab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Pickup Items" href="#/app/activity/pickup">
+        <ion-nav-view name="pickuptab"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs> -->
+
+<div class="tabs custom-tabs">
+    <a class="tab-item custom-tab-item {{activeTabId == 0 ? 'active' : ''}}" menu-close href="#/app/activity/wishlist" ng-click="changeActiveTabTo(0)">
+        <span>Wishlist Items</span>
+    </a>
+    <a class="tab-item custom-tab-item {{activeTabId == 1 ? 'active' : ''}}" menu-close href="#/app/activity/pickup" ng-click="changeActiveTabTo(1)">
+        <span>Pickup Items</span>
+    </a>
+</div>
+<ion-nav-view name="activityTab"></ion-nav-view>

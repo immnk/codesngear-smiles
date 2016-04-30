@@ -1,0 +1,67 @@
+<ion-view view-title="Activity">
+    <ion-content class="has-tabs activity-content pickup-content">
+        <div class="wishlist-items">
+            <div class="wishlist-item-wrapper" ng-repeat="item in items">
+                <div class="wishlist-item">
+                    <div class="wishlist-item-img">
+                        <img ng-src="{{ item.itemImg }}">
+                    </div>
+                    <div class="wishlist-item-description">
+                        <div class="item-name">{{ item.itemName }}</div>
+                        <div class="description">{{ item.description }}</div>
+                        <div class="price"><span class="label">Estimated Price: </span><span class="value">Rs. {{ item.apprPrice }}</span></div>
+                        <div class="qty"><span class="label">Quantity Required: </span><span class="value">{{ item.qty }}</span></div>
+                        <!-- <div class="item-recv">{{ item.itemRecv }}</div> -->
+                        <div class="status">
+                            <div class="completed-bar"></div>
+                            <span class="status-text">Donated</span>
+                        </div>
+                    </div>
+                    <div class="donate">
+                        <div class="donate-button" ng-click="toggleShowHideDetails(item)">
+                            <div class="hand">
+                                <i class="ionicons ion-{{ item.showDetails ? 'minus' : 'plus' }}"></i>
+                            </div>
+                            <!-- <div class="donate-text">Donate</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="wishlist-donations" ng-if="item.showDetails">
+                	<div class="wishlist-donation">
+                		<div class="wishlist-donation-donar">
+                            <div class="wishlist-donation-donar-avatar"></div>   
+                        </div>
+                		<div class="wishlist-donation-description">
+                			Lilly is donating 30 Classmate Notebooks
+                		</div>
+                		<div class="wishlist-donation-status">
+                			<i class="ion-checkmark"></i>
+                		</div>
+                	</div>
+                    <div class="wishlist-donation">
+                        <div class="wishlist-donation-donar">
+                            <div class="wishlist-donation-donar-avatar"></div>   
+                        </div>
+                        <div class="wishlist-donation-description">
+                            Lilly is donating 30 Classmate Notebooks
+                        </div>
+                        <div class="wishlist-donation-status">
+                            <i class="ion-checkmark"></i>
+                        </div>
+                    </div>
+                    <div class="wishlist-donation">
+                        <div class="wishlist-donation-donar">
+                            <div class="wishlist-donation-donar-avatar"></div>   
+                        </div>
+                        <div class="wishlist-donation-description">
+                            Lilly is donating 30 Classmate Notebooks
+                        </div>
+                        <div class="wishlist-donation-status">
+                            <i class="ion-checkmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

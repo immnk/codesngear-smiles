@@ -60,10 +60,29 @@ angular.module(SMILES.APP_NAME, ['ionic', 'ionic.service.core', 'ionic.service.a
             })
             .state(SMILES.STATES.ACTIVITY.name, {
                 url: SMILES.STATES.ACTIVITY.url,
+                abstract: true,
                 views: {
                     'menuContent': {
                         templateUrl: SMILES.STATES.ACTIVITY.templateUrl,
                         controller: SMILES.STATES.ACTIVITY.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.WISHLIST.name, {
+                url: SMILES.STATES.WISHLIST.url,
+                views: {
+                    'activityTab': {
+                        templateUrl: SMILES.STATES.WISHLIST.templateUrl,
+                        controller: SMILES.STATES.WISHLIST.controller
+                    }
+                }
+            })
+            .state(SMILES.STATES.PICKUP.name, {
+                url: SMILES.STATES.PICKUP.url,
+                views: {
+                    'activityTab': {
+                        templateUrl: SMILES.STATES.PICKUP.templateUrl,
+                        controller: SMILES.STATES.PICKUP.controller
                     }
                 }
             })

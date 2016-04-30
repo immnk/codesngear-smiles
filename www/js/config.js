@@ -16,11 +16,13 @@ var SMILES = {
         SideMenuController: "SideMenuController",
         DashboardController: "DashboardController",
         ActivityController: "ActivityController",
+        WishListController: "WishListController",
+        PickupController: "PickupController",
         WishListDetailController: "WishListDetailController",
         OrphanageController: "OrphanageController",
         GalleryController: "GalleryController",
         ManagementController: 'ManagementController',
-        AboutUsController: "AboutUsController"
+        AboutUsController: "AboutUsController",
     },
     FACTORIES: {
         GalleryFactory: "GalleryFactory",
@@ -64,10 +66,22 @@ var SMILES = {
             controller: 'OrphanageController'
         },
         ACTIVITY: {
-            name: 'app.activity',
-            url: '/{activityId:int}',
+            name: 'app.activityTabs',
+            url: '/activity',
             templateUrl: 'templates/activity.html',
             controller: 'ActivityController'
+        },
+        WISHLIST:{
+            name: 'app.activityTabs.wishlist',
+            url: '/wishlist',
+            templateUrl: 'templates/wishlist.html',
+            controller: 'WishListController'
+        },
+        PICKUP:{
+            name: 'app.activityTabs.pickup',
+            url: '/pickup',
+            templateUrl: 'templates/pickup.html',
+            controller: 'PickupController'
         },
         WISHLISTDETAIL: {
             name: 'app.wishlist',

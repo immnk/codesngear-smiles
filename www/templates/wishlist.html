@@ -1,0 +1,32 @@
+<ion-view view-title="Activity">
+    <ion-content class="has-tabs activity-content">
+        <div class="wishlist-items">
+            <div class="wishlist-item-wrapper" ng-repeat="item in items">
+                <div class="wishlist-item">
+                    <div class="wishlist-item-img">
+                        <img ng-src="{{ item.itemImg }}">
+                    </div>
+                    <div class="wishlist-item-description">
+                        <div class="item-name">{{ item.itemName }}</div>
+                        <div class="description">{{ item.description }}</div>
+                        <div class="price"><span class="label">Estimated Price: </span><span class="value">Rs. {{ item.apprPrice }}</span></div>
+                        <div class="qty"><span class="label">Quantity Required: </span><span class="value">{{ item.qty }}</span></div>
+                        <!-- <div class="item-recv">{{ item.itemRecv }}</div> -->
+                        <div class="status">
+                            <div class="completed-bar" style="width: {{'' + getCompletedValue(item) + '%'}}"></div>
+                            <span class="status-text">Donated</span>
+                        </div>
+                    </div>
+                    <div class="donate">
+                        <div class="donate-button">
+                            <div class="hand {{getCompletedValue(item) == 100 ? 'donation-completed' : ''}}">
+                                <i class="ionicons ion-android-hand"></i>
+                            </div>
+                            <div class="donate-text">{{getCompletedValue(item) == 100 ? 'Closed' : 'Donate'}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -36,7 +36,7 @@ body.ionic {
   .bar .title {
     color: #FFF !important; }
 
-.outer-wrapper, .dashboard, .orphanages, .gallery, .management, .activity, .about {
+.outer-wrapper, .dashboard, .orphanages, .gallery, .management, .about {
   position: relative;
   font-family: "SFUI", "sans-serif";
   min-height: calc(100vh - 44px);
@@ -56,6 +56,30 @@ body.ionic {
   -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75); }
+
+.custom-tabs {
+  background: #18bc9c !important;
+  color: #FFF !important;
+  padding: 0 !important;
+  bottom: initial;
+  top: 44px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+  .custom-tabs .custom-tab-item {
+    max-width: none;
+    font-size: 20px;
+    opacity: 1;
+    position: relative; }
+    .custom-tabs .custom-tab-item.active:after {
+      border-color: #4356B2; }
+    .custom-tabs .custom-tab-item:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 2px solid #FFF; }
 
 .login {
   font-family: "SFUI", "sans-serif";
@@ -129,7 +153,8 @@ body.ionic {
         font-size: 13px;
         font-weight: 100;
         letter-spacing: 1px;
-        padding: 5px; }
+        padding: 5px;
+        text-decoration: none; }
 
 ion-side-menu {
   background: rgba(72, 72, 72, 0.7);
@@ -346,23 +371,148 @@ ion-side-menu {
     .management .transactions .tr-card .actions .button {
       margin: 0 10px; }
 
-.activity .item {
-  margin: 10px 0;
-  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
-  .activity .item .item-img img {
-    width: 80px; }
-  .activity .item .item-description {
-    padding: 0 10px; }
-    .activity .item .item-description .item-name {
-      font-weight: 700;
-      text-transform: capitalize;
-      font-size: 18px; }
-    .activity .item .item-description .description {
-      font-size: 14px;
-      text-transform: capitalize;
-      font-weight: 200; }
+.activity-content {
+  background: #535353;
+  color: #5e5e5e;
+  bottom: 0 !important;
+  top: 89px !important;
+  padding: 0 10px; }
+  .activity-content .wishlist-items {
+    /*@extend .outer-wrapper;*/ }
+    .activity-content .wishlist-items .wishlist-item-wrapper {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      background: #FFF;
+      padding: 10px;
+      padding-bottom: 15px; }
+      .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item {
+        position: relative;
+        padding: 10px 80px 10px 100px;
+        min-height: 100px;
+        /*@include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));*/ }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-img {
+          position: absolute;
+          left: 10px;
+          top: 10px; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-img img {
+            width: 80px;
+            height: 80px; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .item-name {
+          font-weight: bold;
+          text-transform: capitalize;
+          font-size: 18px;
+          color: #000; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .description {
+          font-size: 14px;
+          text-transform: capitalize;
+          font-weight: 200; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .qty .value {
+          color: #18bc9c;
+          font-size: 16px; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .price {
+          font-size: 12px; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .status {
+          height: 25px;
+          position: relative;
+          text-align: center;
+          text-transform: uppercase;
+          background: #989898;
+          color: #FFF;
+          line-height: 25px;
+          opacity: 0.5; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .status .status-text {
+            z-index: 9;
+            position: relative; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .wishlist-item-description .status .completed-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 80%;
+            max-width: 100%;
+            background: #18bc9c; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .donate {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          bottom: 0px;
+          width: 80px;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: center;
+          -webkit-justify-content: center;
+          align-items: center;
+          -webkit-align-items: center;
+          text-align: center; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .donate .donate-text {
+            padding-top: 5px; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .donate .hand {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            background: #18bc9c;
+            -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+            .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .donate .hand i {
+              font-size: 32px;
+              line-height: 40px;
+              color: #FFF; }
+            .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-item .donate .hand.donation-completed {
+              background: #C7C7C7; }
+      .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation {
+        margin-right: 30px;
+        margin-bottom: 20px;
+        position: relative;
+        background: #18bc9c;
+        height: 40px;
+        padding-left: 60px;
+        padding-right: 30px;
+        -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation .wishlist-donation-donar {
+          position: absolute;
+          left: 10px;
+          top: 0;
+          bottom: 0; }
+          .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation .wishlist-donation-donar .wishlist-donation-donar-avatar {
+            display: inline-block;
+            height: 36px;
+            width: 36px;
+            border-radius: 18px;
+            background-image: url("../img/Logo.png");
+            background-size: 100% 100%;
+            margin-top: 2px; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation .wishlist-donation-description {
+          color: #FFF; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation .wishlist-donation-status {
+          position: absolute;
+          right: -30px;
+          top: -5px;
+          height: 50px;
+          width: 50px;
+          border-radius: 25px;
+          background: #C7C7C7;
+          text-align: center;
+          line-height: 50px;
+          color: #18bc9c;
+          font-size: 24px;
+          -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: -2px;
+          border: 2px solid #535353; }
+        .activity-content .wishlist-items .wishlist-item-wrapper .wishlist-donations .wishlist-donation:last-child {
+          margin-bottom: 0; }
+
+.pickup-content .wishlist-items .donate {
+  width: 50px !important; }
 
 .about {
   color: #FFF; }

@@ -1,28 +1,170 @@
-.activity {
-    @extend .outer-wrapper;
-    .item {
-        margin: 10px 0;
-        @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
-        .item-img {
-            img {
-                width: 80px;
-            }
+.activity-content{
+    background: $dark-gray;
+    color: $font-color-black;
+    bottom: 0 !important;
+    top: 89px !important;
+    padding: 0 10px;
+    .wishlist-items {
+        /*@extend .outer-wrapper;*/
+        .wishlist-item-wrapper{
+            border-bottom: 1px solid $transparent-black-background;
+            background: $white-background;
+            padding: 10px;
+            padding-bottom: 15px;
+            .wishlist-item {
+                position: relative;
+                padding: 10px 80px 10px 100px;
+                min-height: 100px;
+                /*@include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));*/
+                .wishlist-item-img {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                .wishlist-item-description {
+                    .item-name {
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        font-size: 18px;
+                        color: #000;
+                    }
+                    .description {
+                        font-size: 14px;
+                        text-transform: capitalize;
+                        font-weight: 200;
+                    }
+                    .qty {
+                        .value{
+                            color: $theme-color; 
+                            font-size: 16px;
+                        }
+                    }
+                    .price {
+                        font-size: 12px;
+                    }
+                    .item-recv {
+
+                    }
+                    .status{
+                        height: 25px;
+                        position: relative;
+                        text-align: center;
+                        text-transform: uppercase;
+                        background: $box-shadow;
+                        color: $font-color-white;
+                        line-height: 25px;
+                        opacity: 0.5;
+                        .status-text{
+                            z-index: 9;
+                            position: relative;
+                        }
+                        .completed-bar{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 80%;
+                            max-width: 100%;
+                            background: $theme-color;
+                        }
+                    }
+                }
+                .donate{
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    bottom: 0px;
+                    width: 80px;
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    align-items: center;
+                    -webkit-align-items: center;
+                    text-align: center;
+                    .donate-text{
+                        padding-top: 5px;
+                    }
+                    .hand{
+                        display: inline-block;
+                        @include circle(40px);
+                        background: $theme-color;
+                        @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+                        i{
+                            font-size: 32px;
+                            line-height: 40px;
+                            color: $font-color-white;
+                        }
+                        &.donation-completed{
+                            background: $light-gray;
+                        }
+                    }
+                }
+            } 
+            .wishlist-donations{
+                .wishlist-donation{
+                    margin-right: 30px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    background: $theme-color;
+                    height: 40px;
+                    padding-left: 60px;
+                    padding-right: 30px;
+                    @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+                    .wishlist-donation-donar{
+                        position: absolute;
+                        left: 10px;
+                        top: 0;
+                        bottom: 0;
+                        .wishlist-donation-donar-avatar{
+                            display: inline-block;
+                            @include circle(36px);
+                            background-image: url('../img/Logo.png');
+                            background-size: 100% 100%;
+                            margin-top: 2px;
+                        } 
+                    }
+                    .wishlist-donation-description{
+                        color: $font-color-white;
+                    }
+                    .wishlist-donation-status{
+                        position: absolute;
+                        right: -30px;
+                        top: -5px;
+                        @include circle(50px);
+                        background: $light-gray;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $theme-color;
+                        font-size: 24px;
+                        @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: -2px;
+                        border: 2px solid $dark-gray;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }   
         }
-        .item-description {
-            padding: 0 10px;
-            .item-name {
-                font-weight: 700;
-                text-transform: capitalize;
-                font-size: 18px;
-            }
-            .description {
-                font-size: 14px;
-                text-transform: capitalize;
-                font-weight: 200;
-            }
-            .qty {}
-            .price {}
-            .item-recv {}
+        
+    }
+}
+
+.pickup-content{
+    .wishlist-items{
+        .donate{
+            width: 50px !important;
         }
     }
 }
