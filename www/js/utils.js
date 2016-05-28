@@ -25,7 +25,7 @@ function Core() {
         service.handleError = handleError;
         service.encode = encode;
         service.formatDate = formatDate;
-        service.getLocalData = getLocalData;
+        // service.getLocalData = getLocalData;
 
         function init() {
             Logger.debug("utils - init: start");
@@ -123,7 +123,6 @@ function Core() {
 
             try {
                 var message = service.SMILES_MESSAGES[error.error.code];
-                message = service.SMILES_MESSAGES[error.error.code];
                 return message;
             } catch (e) {
                 return service.SMILES_MESSAGES.NETWORK_ERROR;
@@ -173,22 +172,6 @@ function Core() {
             returnValue = date.substr(0, date.indexOf(":") - 3);
 
             return returnValue;
-        }
-
-        function getLocalData(fileName) {
-            Logger.debug("utils - getLocalData: start");
-            var deferred = $q.defer();
-            
-            $http.get(fileName).then(function(response){
-                console.log(response);
-                deferred.resolve(response);
-            }, function(error){
-                deferred.reject(error);
-            });
-
-            Logger.debug("utils - getLocalData: end");
-
-            return deferred.promise;
         }
 
         return service;

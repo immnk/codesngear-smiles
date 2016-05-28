@@ -30,7 +30,12 @@ function LoginController($scope, $rootScope, $state, utils, PeopleFactory) {
             }, function(message) {
                 utils.Logger.error(message);
                 utils.hideSpinner();
-                utils.showAlert(utils.SMILES_MESSAGES.ERROR_TITLE, message);
+                if (message.incorrect) {
+                    utils.showAlert(utils.SMILES_MESSAGES.FAIL_TITLE, 
+                        utils.SMILES_MESSAGES.FAIL_MESSAGE);
+                } else {
+                    utils.showAlert(utils.SMILES_MESSAGES.ERROR_TITLE, message);
+                }
             });
         }
 

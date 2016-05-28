@@ -5,6 +5,8 @@ messages.constant(SMILES.MESSAGES, {
     GENERIC_ERROR: "A generic error has occurred. Please try again later",
     UNAUTHORIZED: "Your are not authorized. Please check your credentials",
     NOT_APPLICABLE : "N/A",
+    FAIL_TITLE: "Wrong credentials",
+    FAIL_MESSAGE: "Please check the credentials. If error persists please contact support",
     MAIN : {
     	NO_RESULTS : "None of the records match your search."
     },

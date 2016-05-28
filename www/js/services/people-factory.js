@@ -32,6 +32,7 @@ function PeopleFactory($q, utils) {
 
                     deferred.resolve(user);
                 } else {
+                    response.incorrect = true;
                     deferred.reject(response);
                 }
             }, function(error) {

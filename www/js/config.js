@@ -109,7 +109,8 @@ var SMILES = {
         }
     },
     BACK_END: {
-        RootURL: "http://52.70.70.64:3300/",
+        host: "52.70.70.64",
+        RootURL: "http://localhost:3300/",
         MethodName: {
             "login": "Login",
             "register": "Register",
