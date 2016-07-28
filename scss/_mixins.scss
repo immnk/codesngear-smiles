@@ -1,0 +1,40 @@
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+    -webkit-box-shadow: $horizontal $vertical $blur $color;
+    -moz-box-shadow: $horizontal $vertical $blur $color;
+    box-shadow: $horizontal $vertical $blur $color;
+}
+
+@mixin circle($radius: 50px) {
+    height: $radius;
+    width: $radius;
+    border-radius: $radius/2;
+}
+
+@font-face {
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Regular.otf);
+}
+@font-face {
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-Heavy.otf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: SFUI;
+    src: url(../assets/fonts/SF-UI/SF-UI-Text-LightItalic.otf);
+    font-weight: 300;
+    font-style: italic;
+}

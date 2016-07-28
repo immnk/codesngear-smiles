@@ -19,6 +19,33 @@
   src: url(../assets/fonts/SF-UI/SF-UI-Text-LightItalic.otf);
   font-weight: 300;
   font-style: italic; }
+* {
+  font-family: "SFUI", "sans-serif";
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SFUI", "sans-serif";
+  font-weight: bold; }
+
+label,
+input,
+select,
+a,
+button,
+dl,
+dt,
+dd {
+  font-family: "SFUI", "sans-serif";
+  font-weight: 300; }
+
+dt {
+  font-weight: normal; }
+
 body.ionic {
   font-family: "SFUI", "sans-serif";
   color: #FFF; }
@@ -81,6 +108,9 @@ body.ionic {
       right: 0;
       border: 2px solid #FFF; }
 
+.popup-container .popup .popup-body {
+  color: #000; }
+
 .login {
   font-family: "SFUI", "sans-serif";
   background: -webkit-linear-gradient(rgba(72, 72, 72, 0.7), rgba(58, 58, 58, 0.8)), url("../img/login-background.jpg") no-repeat;
@@ -113,22 +143,23 @@ body.ionic {
       .login .content .form .item {
         border-top: none;
         border-left: none;
-        border-right: none; }
+        border-right: none;
+        border-width: 2px; }
         .login .content .form .item .input-label {
           text-transform: uppercase;
-          letter-spacing: 6px;
+          letter-spacing: 0px;
           color: #EEE; }
         .login .content .form .item input::-webkit-input-placeholder {
           text-transform: uppercase;
-          letter-spacing: 6px; }
+          letter-spacing: 0px; }
       .login .content .form .button {
         background: white;
         border-radius: 50px;
         padding: 8px;
+        font-family: "SFUI", "sans-serif";
         font-size: 20px;
         font-weight: 100;
-        letter-spacing: 2px;
-        color: black;
+        color: #000;
         margin: 10px 0; }
     .login .content .error {
       opacity: 0;
@@ -166,7 +197,8 @@ ion-side-menu {
   background-size: cover;
   background-position: center center; }
   ion-side-menu .user_details {
-    margin-bottom: 100px; }
+    position: absolute;
+    bottom: 0; }
     ion-side-menu .user_details .avatar {
       background: #444 url("../img/profile.png");
       background-size: cover;
@@ -300,12 +332,13 @@ ion-side-menu {
       background: #FFF;
       padding: 10px;
       margin-top: -5px;
-      color: #5e5e5e; }
+      color: #000; }
       .orphanages .orphanage .details .actions {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 10px 0px; }
+        margin: 10px 0px;
+        padding: 0 10px; }
         .orphanages .orphanage .details .actions .acton, .orphanages .orphanage .details .actions .phone, .orphanages .orphanage .details .actions .email, .orphanages .orphanage .details .actions .address {
           width: 50px;
           height: 50px;
@@ -315,10 +348,7 @@ ion-side-menu {
           background: rgba(255, 255, 255, 0.6);
           border: 1px solid #b4b4b4;
           border-radius: 50%;
-          transition: all .3s ease-out;
-          -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
-          -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6); }
+          transition: all .3s ease-out; }
           .orphanages .orphanage .details .actions .acton:active, .orphanages .orphanage .details .actions .phone:active, .orphanages .orphanage .details .actions .email:active, .orphanages .orphanage .details .actions .address:active {
             transform: translateY(5px); }
         .orphanages .orphanage .details .actions .phone i {
@@ -377,7 +407,7 @@ ion-side-menu {
 
 .activity-content {
   background: #535353;
-  color: #5e5e5e;
+  color: #000;
   bottom: 0 !important;
   top: 89px !important;
   padding: 0 10px; }

@@ -8,7 +8,8 @@ ion-side-menu {
     background-size: cover;
     background-position: center center;
     .user_details {
-        margin-bottom: 100px;
+        position: absolute;
+        bottom: 0;
         .avatar {
             @extend .img;
             background: #444 url('../img/profile.png');

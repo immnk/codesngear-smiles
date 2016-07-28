@@ -1,75 +1,37 @@
-$theme-color: #18bc9c;
-$theme-border-color: #676767;
-$box-shadow: #989898;
-$transparent-background: rgba(255, 255, 255, 0);
-$transparent-black-background: rgba(0, 0, 0, 0.3);
-$white-background: #FFF;
-$dark-gray: #535353;
-$light-gray: #C7C7C7;
-$blue: #4356B2;
-$theme-card-width: 200px;
-$theme-card-height: 200px;
-
-/* SASS / Social Media Brand Colors */
-$twitter: #00aced;
-$facebook: #3b5998;
-$googleplus: #dd4b39;
-$general: #1b926c;
-
-$font-color-white: #FFF;
-$font-color-black: #5e5e5e;
-$font-theme-color: #006551;
-
-$caption-background: #2c3f52;
-$caption-special: #ed4e6e;
-
-$quote-border: #989898;
-
-$font-family: "SFUI", "sans-serif";
-@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
-    -webkit-box-shadow: $horizontal $vertical $blur $color;
-    -moz-box-shadow: $horizontal $vertical $blur $color;
-    box-shadow: $horizontal $vertical $blur $color;
+* {
+    font-family: $font-family;
+    box-sizing: border-box;
 }
 
-@mixin circle($radius: 50px) {
-    height: $radius;
-    width: $radius;
-    border-radius: $radius/2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family;
+    font-weight: bold;
 }
 
-@font-face {
-    font-family: SFUI;
-    src: url(../assets/fonts/SF-UI/SF-UI-Text-Regular.otf);
-}
-@font-face {
-    font-family: SFUI;
-    src: url(../assets/fonts/SF-UI/SF-UI-Text-Light.otf);
+label,
+input,
+select,
+a,
+button,
+dl,
+dt,
+dd {
+    font-family: $font-family;
     font-weight: 300;
 }
 
-@font-face {
-    font-family: SFUI;
-    src: url(../assets/fonts/SF-UI/SF-UI-Text-Bold.otf);
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: SFUI;
-    src: url(../assets/fonts/SF-UI/SF-UI-Text-Heavy.otf);
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: SFUI;
-    src: url(../assets/fonts/SF-UI/SF-UI-Text-LightItalic.otf);
-    font-weight: 300;
-    font-style: italic;
+dt {
+    font-weight: normal;
 }
 
 body.ionic {
     font-family: $font-family;
-    color: $font-color-white;
+    color: $theme-white;
     input,
     input::-webkit-placeholder,
     textarea {
@@ -82,10 +44,10 @@ body.ionic {
     background: $theme-color !important;
     font-family: $font-family;
     .button {
-        color: $font-color-white !important;
+        color: $theme-white !important;
     }
     .title {
-        color: $font-color-white !important;
+        color: $theme-white !important;
     }
 }
 
@@ -93,8 +55,7 @@ body.ionic {
     position: relative;
     font-family: $font-family;
     min-height: calc(100vh - 44px);
-    background: linear-gradient(rgba(120,120,120,0.6), rgba(70, 70, 70, 0.5)), 
-        url('../img/login-background.jpg') no-repeat;
+    background: linear-gradient(rgba(120, 120, 120, 0.6), rgba(70, 70, 70, 0.5)), url('../img/login-background.jpg') no-repeat;
     background-position: 50%;
     background-size: cover;
 }
@@ -115,30 +76,41 @@ body.ionic {
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.custom-tabs{
+.custom-tabs {
     background: $theme-color !important;
-    color: $font-color-white !important;
+    color: $theme-white !important;
     padding: 0 !important;
     bottom: initial;
     top: 44px;
-    @include box-shadow(0px, 2px, 5px, rgba(0, 0, 0, 0.6));
-    .custom-tab-item{
+    @include box-shadow(0px,
+    2px,
+    5px,
+    rgba(0, 0, 0, 0.6));
+    .custom-tab-item {
         max-width: none;
         font-size: 20px;
         opacity: 1;
         position: relative;
-        &.active{
-            &:after{
+        &.active {
+            &:after {
                 border-color: $blue;
             }
         }
-        &:after{
+        &:after {
             content: "";
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            border: 2px solid $white-background;
+            border: 2px solid $theme-white;
+        }
+    }
+}
+
+.popup-container {
+    .popup {
+        .popup-body {
+            color: $theme-black;
         }
     }
 }

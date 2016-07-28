@@ -1,6 +1,6 @@
 .activity-content{
     background: $dark-gray;
-    color: $font-color-black;
+    color: $theme-black;
     bottom: 0 !important;
     top: 89px !important;
     padding: 0 10px;
@@ -8,7 +8,7 @@
         /*@extend .outer-wrapper;*/
         .wishlist-item-wrapper{
             border-bottom: 1px solid $transparent-black-background;
-            background: $white-background;
+            background: $theme-white;
             padding: 10px;
             padding-bottom: 15px;
             .wishlist-item {
@@ -55,7 +55,7 @@
                         text-align: center;
                         text-transform: uppercase;
                         background: $box-shadow;
-                        color: $font-color-white;
+                        color: $theme-white;
                         line-height: 25px;
                         opacity: 0.5;
                         .status-text{
@@ -97,7 +97,7 @@
                         i{
                             font-size: 32px;
                             line-height: 40px;
-                            color: $font-color-white;
+                            color: $theme-white;
                         }
                         &.donation-completed{
                             background: $light-gray;
@@ -129,7 +129,7 @@
                         } 
                     }
                     .wishlist-donation-description{
-                        color: $font-color-white;
+                        color: $theme-white;
                     }
                     .wishlist-donation-status{
                         position: absolute;
